@@ -2,4 +2,5 @@
 <% @quizzs.each do |quizz| %>
   <h2>SUBJECT: <%= quizz.subject.upcase  %></h2>
   <h3>quizz: <%= quizz.name  %></h3>
+  <%= link_to "see", quizz_path(quizz), method: :get %>
 <% end %>

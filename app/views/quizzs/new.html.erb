@@ -1,8 +1,7 @@
 <h1>Create a new Quizz</h1>
 
-
 <%= simple_form_for [current_user, @quizz] do |f| %>
   <%= f.input :name %>
   <%= f.input :subject %>
-  <%= f.submit "Create it!", class: "btn btn-success" %>
+  <%= f.submit "create it", class: "btn btn-success" %>
 <% end %>

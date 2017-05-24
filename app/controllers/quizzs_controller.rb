@@ -27,10 +27,10 @@ class QuizzsController < ApplicationController
 
   def update
     @quizz = Quizz.find(params[:id])
-      if @quizz.update(params[:quizz])
-        render "quizz/show"
+      if @quizz.update(quizz_params)
+        render "quizzs/show"
       else
-        render "quizz/edit"
+        render "quizzs/edit"
       end
   end
 
@@ -44,5 +44,4 @@ class QuizzsController < ApplicationController
   def quizz_params
     params.require(:quizz).permit(:name, :subject)
   end
-
 end
