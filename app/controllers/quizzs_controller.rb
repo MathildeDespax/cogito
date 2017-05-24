@@ -1,6 +1,6 @@
 class QuizzsController < ApplicationController
   def index
-    @quizzs = Quizz.all
+    @quizzs = current_user.quizzs
   end
 
   def show
@@ -12,8 +12,7 @@ class QuizzsController < ApplicationController
   end
 
   def create
-    @quizz = Quizz.new(quizz_params)
-    @quizz.teacher = current_user
+    @quizz = current_user.quizzs.new(quizz_params)
     if @quizz.save
      redirect_to quizz_path(@quizz)
     else
@@ -27,17 +26,17 @@ class QuizzsController < ApplicationController
 
   def update
     @quizz = Quizz.find(params[:id])
-      if @quizz.update(quizz_params)
-        render "quizzs/show"
-      else
-        render "quizzs/edit"
-      end
+    if @quizz.update(quizz_params)
+      render "quizzs/show"
+    else
+      render "quizzs/edit"
+    end
   end
 
   def destroy
     @quizz = Quizz.find(params[:id])
     @quizz.destroy
-    redirect_to user_quizzs_path(@quizz.teacher)
+    redirect_to quizzs_path(@quizz.teacher)
   end
 
   private

@@ -30,7 +30,7 @@ puts 'done'
 puts 'Creating users ...'
 
 teacher1 = User.create!(first_name: "Anthony", last_name: "Larzilliere", email: "anthony@cogito.com", password:"cogito1234")
-teacher2 = User.create!(first_name: "Sylvain", last_name: "Peignet", email: "sylvain@cogito.com", password:"cogito1234")
+teacher2 = User.create!(first_name: "Sylvain", last_name: "Peigney", email: "sylvain@cogito.com", password:"cogito1234")
 teacher3 = User.create!(first_name: "Bobby", last_name: "Lapointe", email: "boby@cogito.com", password:"cogito1234")
 student1 = User.create!(first_name: "Mathilde", last_name: "Despax", email: "mathilde@cogito.com", password:"cogito1234")
 student2 = User.create!(first_name: "Bastien", last_name: "Pinot", email: "bastien@cogito.com", password:"cogito1234")
