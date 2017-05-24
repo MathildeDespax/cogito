@@ -1,0 +1,5 @@
+<%= simple_form_for [@quizz, @card] do |f| %>
+  <%= f.input :question %>
+  <%= f.input :answer %>
+  <%= f.submit "Save", class: "btn btn-success" %>
+<% end %>
