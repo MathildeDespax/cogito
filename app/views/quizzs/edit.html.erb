@@ -1,0 +1,7 @@
+<h1>edit</h1>
+
+<%= simple_form_for @quizz do |f| %>
+  <%= f.input :name %>
+  <%= f.input :subject %>
+  <%= f.submit "update it", class: "btn btn-success" %>
+<% end %>

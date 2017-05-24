@@ -2,7 +2,7 @@ class Quizz < ApplicationRecord
   has_many :shares
   has_many :classrooms, through: :shares
 
-  has_many :cards
+  has_many :cards, dependent: :destroy
 
   belongs_to :teacher, class_name: "User", foreign_key: :user_id
 
