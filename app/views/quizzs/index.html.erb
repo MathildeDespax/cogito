@@ -1,0 +1,5 @@
+<h1>coucou je suis l'index</h1>
+<% @quizzs.each do |quizz| %>
+  <h2>SUBJECT: <%= quizz.subject.upcase  %></h2>
+  <h3>quizz: <%= quizz.name  %></h3>
+<% end %>
