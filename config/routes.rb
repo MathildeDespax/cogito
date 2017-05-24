@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'quizzs#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users
 
@@ -10,4 +10,9 @@ Rails.application.routes.draw do
   resources :classrooms
   resources :student_evaluations, only: [:index, :create, :show]
   resources :shares, only: [:new, :create]
+
+  namespace :students do
+    resources :quizzs, only: [:show]
+  end
+
 end
