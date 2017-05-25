@@ -28,7 +28,7 @@ class QuizzsController < ApplicationController
   def update
     @quizz = Quizz.find(params[:id])
     if @quizz.update(quizz_params)
-      render "quizzs/show"
+      redirect_to quizz_path(@quizz)
     else
       render "quizzs/edit"
     end
