@@ -2,6 +2,7 @@
   <h3><%= card.question %></h3>
   <h4><%= card.answer %></h4>
   <%= link_to "Delete", card_path(card), method: :delete %>
+  <%= link_to "Edit", edit_card_path(card) %>
 <% end %>
 
 

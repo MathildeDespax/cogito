@@ -1,8 +1,4 @@
 class CardsController < ApplicationController
-  def index
-
-  end
-
   def new
     @card = Card.new
   end
@@ -18,18 +14,22 @@ class CardsController < ApplicationController
   end
 
   def edit
-
+    @card = Card.find(params[:id])
   end
 
-  def update
-
+   def update
+    @card = Card.find(params[:id])
+    if @card.update(card_params)
+      redirect_to quizz_path(@card.quizz)
+    else
+      render "card/:id/edit"
+    end
   end
 
   def destroy
-    @quizz = Quizz.find(params[:quizz_id])
-    @card = Card.find(params[:card_id])
-    @card.destroy
-    redirect_to quizzs_path(@quizz)
+    card = Card.find(params[:id])
+    card.destroy
+    redirect_to quizz_path(card.quizz)
   end
 
   private
