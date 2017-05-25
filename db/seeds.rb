@@ -177,7 +177,7 @@ classrooms_attributes = [
   },
   {
     name: "TerminalB",
-    teacher: teacher2
+    teacher: teacher3
   },
   {
     name: "Seconde3",

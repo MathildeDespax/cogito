@@ -1,0 +1,7 @@
+<h1>SHARES</h1>
+
+<%= simple_form_for [@quizz, @share] do |f| %>
+  <%= f.input :quizz_id, collection: @quizzs  %>
+  <%= f.input :classroom_id, collection: @classrooms %>
+  <%= f.submit "Share", class: "btn btn-success" %>
+<% end %>

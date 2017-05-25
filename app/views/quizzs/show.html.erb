@@ -1,6 +1,10 @@
 <h1>QUIZZ SHOW</h1>
 <h2><%= @quizz.subject %></h2>
 <h3><%= @quizz.name %></h3>
+<% @quizz.shares.each do |share| %>
+<p> This has been sent to <%=share.classroom.name %> on <%=share.created_at  %></p>
+<% end %>
+
 
 <%= link_to "Delete", quizz_path(@quizz), method: :delete %>
 <%= link_to "Edit", edit_quizz_path(@quizz) %>
