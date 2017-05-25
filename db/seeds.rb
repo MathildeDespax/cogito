@@ -27,28 +27,30 @@ models = [
 ]
 models.each { |model| model.destroy_all }
 puts 'done'
-puts 'Creating users ...'
 
+puts 'Creating users ...'
+students = []
 teacher1 = User.create!(first_name: "Anthony", last_name: "Larzilliere", email: "anthony@cogito.com", password:"cogito1234")
 teacher2 = User.create!(first_name: "Sylvain", last_name: "Peigney", email: "sylvain@cogito.com", password:"cogito1234")
 teacher3 = User.create!(first_name: "Bobby", last_name: "Lapointe", email: "boby@cogito.com", password:"cogito1234")
-student1 = User.create!(first_name: "Mathilde", last_name: "Despax", email: "mathilde@cogito.com", password:"cogito1234")
-student2 = User.create!(first_name: "Bastien", last_name: "Pinot", email: "bastien@cogito.com", password:"cogito1234")
-student3 = User.create!(first_name: "Gregory", last_name: "Debargue", email: "gregory@cogito.com", password:"cogito1234")
-student4 = User.create!(first_name: "Josette", last_name: "Dupont", email: "Josette@cogito.com", password:"cogito1234")
-student5 = User.create!(first_name: "Therese", last_name: "Martin", email: "therese@cogito.com", password:"cogito1234")
-student6 = User.create!(first_name: "Julie", last_name: "Lapine", email: "julie@cogito.com", password:"cogito1234")
-student7 = User.create!(first_name: "Fanny", last_name: "Robinet", email: "fanny@cogito.com", password:"cogito1234")
-student8 = User.create!(first_name: "John", last_name: "Etti", email: "john@cogito.com", password:"cogito1234")
-student9 = User.create!(first_name: "Steevy", last_name: "Jacket", email: "steeve@cogito.com", password:"cogito1234")
+students << student1 = User.create!(first_name: "Mathilde", last_name: "Despax", email: "mathilde@cogito.com", password:"cogito1234")
+students << student2 = User.create!(first_name: "Bastien", last_name: "Pinot", email: "bastien@cogito.com", password:"cogito1234")
+students << student3 = User.create!(first_name: "Gregory", last_name: "Debargue", email: "gregory@cogito.com", password:"cogito1234")
+students << student4 = User.create!(first_name: "Josette", last_name: "Dupont", email: "Josette@cogito.com", password:"cogito1234")
+students << student5 = User.create!(first_name: "Therese", last_name: "Martin", email: "therese@cogito.com", password:"cogito1234")
+students << student6 = User.create!(first_name: "Julie", last_name: "Lapine", email: "julie@cogito.com", password:"cogito1234")
+students << student7 = User.create!(first_name: "Fanny", last_name: "Robinet", email: "fanny@cogito.com", password:"cogito1234")
+students << student8 = User.create!(first_name: "John", last_name: "Etti", email: "john@cogito.com", password:"cogito1234")
+students << student9 = User.create!(first_name: "Steevy", last_name: "Jacket", email: "steeve@cogito.com", password:"cogito1234")
+puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
 first_world_war = Quizz.create!(name:"First World War", subject: "History", teacher: teacher1)
 plate_tectonic = Quizz.create!(name:"PLate Tectonic", subject: "SVT", teacher: teacher2)
 maths = Quizz.create!(name:"Maths", subject: "MATHS", teacher: teacher3)
 puts 'done'
-print 'Seeding cards'.ljust(LJUST_MAX, '.')
 
+print 'Seeding cards'.ljust(LJUST_MAX, '.')
 quizzs_data = [
   {
     quizz: first_world_war,
@@ -159,6 +161,7 @@ quizzs_data = [
     question: "Combien de chèvres ?", answer:"12"
   }
 ]
+puts 'done'
 
 Card.create!(quizzs_data)
 puts 'Seeding Classrooms...'
@@ -184,9 +187,9 @@ classrooms_attributes = [
     teacher: teacher2
   }
 ]
+puts 'done'
 
 Classroom.create!(classrooms_attributes)
-
 
 puts 'Seeding join table user classrooms...'
 user_classrooms_attributes = [
@@ -229,5 +232,12 @@ user_classrooms_attributes = [
 ]
 
 UserClassroom.create!(user_classrooms_attributes)
-
 puts 'done'
+
+students.each do |student|
+  Quizz.all.each do |quizz|
+    quizz.cards.each do |card|
+      StudentEvaluation.create!(user: student, card: card, evaluation: rand(0..2))
+    end
+  end
+end
