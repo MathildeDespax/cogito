@@ -8,7 +8,6 @@ class CardsController < ApplicationController
     @card = @quizz.cards.new(card_params)
     @card.save
     redirect_to quizz_path(@quizz)
-
   end
 
   def edit
@@ -17,11 +16,11 @@ class CardsController < ApplicationController
 
    def update
     @card = Card.find(params[:id])
+    @quizz = @card.quizz
     if @card.update(card_params)
-      redirect_to quizz_path(@card.quizz)
+      redirect_to quizz_path(@quizz)
     else
       redirect_to edit_card_path(@card)
-
     end
   end
 
