@@ -1,8 +1,9 @@
-<h1>coucou update</h1>
+<h1>QUIZZ SHOW</h1>
 <h2><%= @quizz.subject %></h2>
 <h3><%= @quizz.name %></h3>
 
 <%= link_to "Delete", quizz_path(@quizz), method: :delete %>
 <%= link_to "Edit", edit_quizz_path(@quizz) %>
 
-
+<%= render "cards/index" %>
+<%= render "cards/form" %>

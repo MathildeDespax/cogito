@@ -4,6 +4,7 @@ class QuizzsController < ApplicationController
   end
 
   def show
+    @card = Card.new
     @quizz = Quizz.find(params[:id])
   end
 
