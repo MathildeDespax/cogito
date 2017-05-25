@@ -24,6 +24,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_median (0.1.4)
+      activerecord
     activejob (5.0.3)
       activesupport (= 5.0.3)
       globalid (>= 0.3.6)
@@ -55,6 +57,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    chartkick (2.2.4)
     coderay (1.1.1)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.3)
@@ -73,6 +76,8 @@ GEM
       sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    groupdate (2.1.1)
+      activerecord (>= 3.0.0)
     i18n (0.8.1)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
@@ -186,14 +191,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_median (~> 0.1.0)
   acts_as_list
   autoprefixer-rails
   better_errors
   binding_of_caller
   bootstrap-sass
+  chartkick
   devise
   figaro
   font-awesome-sass
+  groupdate (~> 2.1.1)
   jbuilder (~> 2.0)
   jquery-rails
   listen

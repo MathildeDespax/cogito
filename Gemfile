@@ -9,6 +9,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 gem 'acts_as_list'
+gem 'chartkick'
+gem 'groupdate'
 
 gem 'sass-rails'
 gem 'jquery-rails'
