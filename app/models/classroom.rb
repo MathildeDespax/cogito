@@ -19,4 +19,11 @@ class Classroom < ApplicationRecord
     .count
   end
 
+  def barchart(card)
+    student_evaluations
+    .where(card: card)
+    .group(:evaluation)
+    .count
+  end
+
 end

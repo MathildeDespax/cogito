@@ -1,4 +1,6 @@
-<h1>Classroom</h1>
+<h1><%= @classroom.name %></h1>
+
+<%= link_to "Back to classrooms", classrooms_path %>
 
 <% @quizzs.each do |quizz| %>
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"
@@ -13,7 +15,7 @@
       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
           <%= pie_chart @classroom.piechart(quizz) %>
-          <%= bar_chart @cards, stacked: true %>
+          <%= bar_chart quizz.chart_stat(@classroom), stacked: true %>
         </div>
       </div>
     </div>
