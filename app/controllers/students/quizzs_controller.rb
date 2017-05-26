@@ -8,8 +8,8 @@ class Students::QuizzsController < ApplicationController
   end
 
   def show
-    @card = Card.new
     @quizz = Quizz.find(params[:id])
+    @student_evaluation = StudentEvaluation.new
   end
 
 end
