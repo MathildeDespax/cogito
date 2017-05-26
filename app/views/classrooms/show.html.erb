@@ -1,4 +1,6 @@
-<h1>Classroom</h1>
+<h1><%= @classroom.name %></h1>
+
+<%= link_to "Back to classrooms", classrooms_path %>
 
 <% @quizzs.each do |quizz| %>
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"

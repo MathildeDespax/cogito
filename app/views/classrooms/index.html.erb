@@ -1,5 +1,5 @@
 <h1>Classrooms</h1>
-
+<%= link_to "Back to index", quizzs_path %>
 <% @classrooms.each do |classroom| %>
   <h2><%= classroom.name  %></h2>
   <%= link_to "View results", classroom_path(classroom), method: :get %>
