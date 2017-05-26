@@ -3,6 +3,8 @@ class Quizz < ApplicationRecord
   has_many :classrooms, through: :shares
 
   has_many :cards, -> { order(position: :asc) }, dependent: :destroy
+  has_many :student_evaluations, through: :cards
+
 
   belongs_to :teacher, class_name: "User", foreign_key: :user_id
 

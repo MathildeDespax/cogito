@@ -14,3 +14,5 @@
 <p> Add a new question </p>
 
 <%= render "cards/form" %>
+
+<%= pie_chart StudentEvaluation.group(:evaluation).count %>

@@ -1,0 +1,21 @@
+<h1>Classroom</h1>
+
+<% @quizzs.each do |quizz| %>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <%= quizz.name %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <%= pie_chart @classroom.piechart(quizz) %>
+          <%= bar_chart @cards, stacked: true %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

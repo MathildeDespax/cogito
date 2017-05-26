@@ -1,0 +1,6 @@
+<h1>Classrooms</h1>
+
+<% @classrooms.each do |classroom| %>
+  <h2><%= classroom.name  %></h2>
+  <%= link_to "View results", classroom_path(classroom), method: :get %>
+<% end %>
