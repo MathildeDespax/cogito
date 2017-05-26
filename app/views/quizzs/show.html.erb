@@ -13,5 +13,4 @@
 <%= render "cards/index" %>
 <%= render "cards/form" %>
 
-
-<%= line_chart @student_evaluations.group_by_date(:evaluation).count %>
+<%= pie_chart StudentEvaluation.group(:evaluation).count %>
