@@ -14,7 +14,7 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
   end
 
-   def update
+  def update
     @card = Card.find(params[:id])
     @quizz = @card.quizz
     if @card.update(card_params)
