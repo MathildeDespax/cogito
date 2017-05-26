@@ -16,7 +16,7 @@ class SharesController < ApplicationController
     @share.classroom.students.each do |student|
       # notify student
       # a remplacer par Twillio
-      UserMailer.new_quizz(student, @share.quizz).deliver_now
+      #UserMailer.new_quizz(student, @share.quizz).deliver_now
     end
     # ============================
 
