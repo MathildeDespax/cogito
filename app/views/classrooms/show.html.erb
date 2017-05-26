@@ -15,7 +15,7 @@
       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
           <%= pie_chart @classroom.piechart(quizz) %>
-          <%= bar_chart @cards, stacked: true %>
+          <%= bar_chart quizz.chart_stat(@classroom), stacked: true %>
         </div>
       </div>
     </div>
