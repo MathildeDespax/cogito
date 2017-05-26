@@ -1,10 +1,11 @@
-<h1>coucou je suis l'index</h1>
+<h1>My quizz</h1>
 <%= link_to "Create a Quizz", new_quizz_path, method: :get %>
 <%= link_to "Share quizz", new_share_path, method: :get %>
 <%= link_to "Classrooms", classrooms_path, method: :get %>
 
+
 <% @quizzs.each do |quizz| %>
-  <h2>SUBJECT: <%= quizz.subject.upcase  %></h2>
-  <h3>quizz: <%= quizz.name  %></h3>
+  <h3>SUBJECT: <%= quizz.subject.upcase  %></h3>
+  <p>quizz: <%= quizz.name  %></p>
   <%= link_to "see", quizz_path(quizz), method: :get %>
 <% end %>
