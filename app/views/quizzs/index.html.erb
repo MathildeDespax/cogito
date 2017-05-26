@@ -1,6 +1,8 @@
 <h1>My quizz</h1>
 <%= link_to "Create a Quizz", new_quizz_path, method: :get %>
-<%= link_to "Share a Quizz", new_share_path, method: :get %>
+<%= link_to "Share quizz", new_share_path, method: :get %>
+<%= link_to "Classrooms", classrooms_path, method: :get %>
+
 
 <% @quizzs.each do |quizz| %>
   <h3>SUBJECT: <%= quizz.subject.upcase  %></h3>
