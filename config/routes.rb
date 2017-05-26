@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :quizzs, shallow: true do
-    resources :cards, shallow: true
+    resources :cards do
+        resources :student_evaluations, only: [:index, :create, :show]
+      end
   end
 
   resources :classrooms
-  resources :student_evaluations, only: [:index, :create, :show]
   resources :shares, only: [:new, :create]
 
   namespace :students do
