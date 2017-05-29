@@ -1,28 +1,41 @@
-<h1><%= @quizz.subject.upcase %></h1>
-<h2><%= @quizz.name %></h2>
+<div class="container">
+    <h1><%= @quizz.subject.upcase %></h1>
+    <h2><%= @quizz.name %></h2>
+</div>
 
-<% @quizz.cards.each do |card| %>
-  <div class="card">
-    <div class="card__front">
-      <h4><%= card.question %></h4>
-    </div>
-    <div class="card__back">
-      <h4><%= card.answer %></h4>
+<div class="container card-container">
+  <% @quizz.cards.each do |card| %>
+    <div class="card">
+      <div class="card__front">
+        <h4><%= card.question %></h4>
+      </div>
+      <div class="card__back card-back">
+        <h4 class="card-answer"><%= card.answer%></h4>
+        <div class="card-evaluation">
+        <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
+          <%= f.input :evaluation, as: :hidden, input_html: { value: :bad } %>
+          <%= f.submit 'Did not know', class: "btn btn-danger"  %>
+        <% end %>
+
+
+
+        <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
+          <%= f.input :evaluation, as: :hidden, input_html: { value: :soso } %>
+          <%= f.submit 'Shaky', class: "btn btn-warning"  %>
+        <% end %>
+
+
+
+        <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
+          <%= f.input :evaluation, as: :hidden, input_html: { value: :good } %>
+          <%= f.submit 'Easy breezy!', class: "btn btn-success" %>
+        <% end %>
+      </div>
     </div>
   </div>
-
-  <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
-    <%= f.input :evaluation, as: :hidden, input_html: { value: :bad } %>
-    <%= f.submit 'bad'  %>
   <% end %>
 
-  <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
-    <%= f.input :evaluation, as: :hidden, input_html: { value: :soso } %>
-    <%= f.submit 'soso'  %>
-  <% end %>
-
-  <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
-    <%= f.input :evaluation, as: :hidden, input_html: { value: :good } %>
-    <%= f.submit 'good'  %>
-  <% end %>
-<% end %>
+  <div class="finished">
+    Youpi tralala
+  </div>
+</div>
