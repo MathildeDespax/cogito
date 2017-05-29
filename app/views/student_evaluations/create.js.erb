@@ -1,0 +1,7 @@
+// set current card as card-played
+$current = $('.card-current');
+$current.removeClass('card-current').addClass('card-played');
+
+// set next card as card-current
+$next = $current.next();
+$next.addClass('card-current');
