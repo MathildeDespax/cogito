@@ -11,16 +11,6 @@ class Quizz < ApplicationRecord
   validates :name, presence: true
   validates :subject, presence: true
 
-  def chart_stat(classroom)
-    cards = [{ name: "good", data: []}, { name: "soso", data: []}, { name: "bad", data: []}]
-    rating = ["good", "soso", "bad"]
-    self.cards.each_with_index do |card, i|
-      classroom.barchart(card).each do |k, v|
-        j = rating.index(k)
-        cards[j][:data] << ["question #{i+1}", v]
-      end
-    end
-    cards
-  end
+
 
 end
