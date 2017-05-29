@@ -1,5 +1,11 @@
-<h1>Create a new Quizz</h1>
-
-<%= render 'form' %>
-<%= link_to "Back", quizzs_path, method: :get %>
-
+<div class="wrapper-form">
+  <div class="container">
+    <h1>Create a quizz</h1>
+    <div class="content">
+      <div class="form">
+        <%= render 'form' %>
+        <%= link_to "Back", quizzs_path, method: :get %>
+      </div>
+    </div>
+  </div>
+</div>
