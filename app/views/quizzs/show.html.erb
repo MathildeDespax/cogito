@@ -1,17 +1,20 @@
-<h1>Name: <%= @quizz.name %></h1>
-<h3>Subject: <%= @quizz.subject %></h3>
-<br><%= link_to "Edit", edit_quizz_path(@quizz) %>
-<br><%= link_to "Finish quizz", quizzs_path %>
-<br><%= link_to "Delete", quizz_path(@quizz), method: :delete %>
-
-<h2>All cards</h2>
-<% @quizz.shares.each do |share| %>
-<p> This has been sent to <%=share.classroom.name %> on <%=share.created_at%></p>
-<% end %>
-
-<%= render "cards/index" %>
-
-<p> Add a new question </p>
-
-<%= render "cards/form" %>
-
+<div class="wrapper-form">
+  <div class="container">
+    <h1>Name: <%= @quizz.name %></h1>
+    <h3>Subject: <%= @quizz.subject %></h3>
+    <br><%= link_to "Edit", edit_quizz_path(@quizz) %>
+    <br><%= link_to "Finish quizz", quizzs_path %>
+    <br><%= link_to "Delete", quizz_path(@quizz), method: :delete %>
+    <h2>All cards</h2>
+    <% @quizz.shares.each do |share| %>
+    <p> This has been sent to <%=share.classroom.name %> on <%=share.created_at%></p>
+    <% end %>
+    <div class="content">
+      <div class="form">
+        <%= render "cards/index" %>
+        <p> Add a new question </p>
+        <%= render "cards/form" %>
+      </div>
+    </div>
+  </div>
+</div>
