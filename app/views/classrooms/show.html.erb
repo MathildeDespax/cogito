@@ -3,19 +3,21 @@
 <%= link_to "Back to classrooms", classrooms_path %>
 
 <% @quizzs.each do |quizz| %>
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%=quizz.id%>" aria-expanded="true" aria-controls="collapseOne">
             <%= quizz.name %>
           </a>
         </h4>
       </div>
-      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div id="collapse<%=quizz.id%>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
+        <h3>Quizz results</h3>
           <%= pie_chart @classroom.piechart(quizz) %>
-          <%= bar_chart quizz.chart_stat(@classroom), stacked: true %>
+        <h3>Questions results</h3>
+          <%= bar_chart @classroom.chart_stat(quizz), stacked: true %>
         </div>
       </div>
     </div>
