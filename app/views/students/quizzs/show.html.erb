@@ -6,17 +6,17 @@
   <p><%= card.question %></p>
 
   <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
-    <%= f.input :status, as: :hidden, input_html: { value: :bad } %>
+    <%= f.input :evaluation, as: :hidden, input_html: { value: :bad } %>
     <%= f.submit 'bad'  %>
   <% end %>
 
   <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
-    <%= f.input :status, as: :hidden, input_html: { value: :soso } %>
+    <%= f.input :evaluation, as: :hidden, input_html: { value: :soso } %>
     <%= f.submit 'soso'  %>
   <% end %>
 
   <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
-    <%= f.input :status, as: :hidden, input_html: { value: :good } %>
+    <%= f.input :evaluation, as: :hidden, input_html: { value: :good } %>
     <%= f.submit 'good'  %>
   <% end %>
 <% end %>

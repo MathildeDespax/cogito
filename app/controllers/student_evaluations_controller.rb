@@ -7,7 +7,9 @@ class StudentEvaluationsController < ApplicationController
   def create
     @student = current_user
     @card = Card.find(params[:card_id])
-    @student_evaluation = StudentEvaluation.new(user: @student, card: @card)
+    @student_evaluation = StudentEvaluation.new(student_evaluation_params)
+    @student_evaluation.user = @student
+    @student_evaluation.card = @card
     if @student_evaluation.save
       respond_to do |format|
          format.html { redirect_to students_quizz_path(@card.quizz) }
@@ -20,4 +22,12 @@ class StudentEvaluationsController < ApplicationController
        end
     end
   end
+
+
+private
+  def student_evaluation_params
+    params.require(:student_evaluation).permit(:evaluation)
+  end
+
+
  end

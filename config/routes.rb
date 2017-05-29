@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :quizzs, shallow: true do
     resources :cards do
-        resources :student_evaluations, only: [:index, :create, :show]
-      end
+      resources :student_evaluations, only: [:index, :create, :show]
+    end
   end
 
   resources :classrooms
