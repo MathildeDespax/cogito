@@ -3,7 +3,6 @@
 <%= link_to "Share quizz", new_share_path, method: :get %>
 <%= link_to "Classrooms", classrooms_path, method: :get %>
 
-
 <% @quizzs.each do |quizz| %>
   <h3>SUBJECT: <%= quizz.subject.upcase  %></h3>
   <p>quizz: <%= quizz.name  %></p>
