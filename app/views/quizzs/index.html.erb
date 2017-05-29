@@ -1,11 +1,24 @@
-<h1>My quizz</h1>
-<%= link_to "Create a Quizz", new_quizz_path, method: :get %>
-<%= link_to "Share quizz", new_share_path, method: :get %>
-<%= link_to "Classrooms", classrooms_path, method: :get %>
+<h1 class="text-center">My Quizzes</h1>
+
+<div class="action text-center">
+  <button type="button" class="btn btn-success"><%= link_to "Create a Quizz", new_quizz_path, method: :get %></button>
+  <button type="button" class="btn btn-success"><%= link_to "Share a Quizz", new_share_path, method: :get %></button>
+  <button type="button" class="btn btn-success"><%= link_to "My Classrooms", classrooms_path, method: :get %></button>
+</div>
 
 
-<% @quizzs.each do |quizz| %>
-  <h3>SUBJECT: <%= quizz.subject.upcase  %></h3>
-  <p>quizz: <%= quizz.name  %></p>
-  <%= link_to "see", quizz_path(quizz), method: :get %>
-<% end %>
+
+<div class="container">
+  <div class="row">
+  <% @quizzs.each do |quizz| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="quizz_card shadow-z-1 ">
+        <div class="quizz_category"><%= quizz.subject.upcase  %></div>
+        <div class="quizz_name text-center"><%= quizz.name  %></div>
+        <p class="details"><%= link_to "see", quizz_path(quizz), method: :get %></p>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+
