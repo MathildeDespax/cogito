@@ -2,8 +2,14 @@
 <h2><%= @quizz.name %></h2>
 
 <% @quizz.cards.each do |card| %>
-  <p><strong><%= card.question %></strong></p>
-  <p><%= card.question %></p>
+  <div class="card">
+    <div class="card__front">
+      <h4><%= card.question %></h4>
+    </div>
+    <div class="card__back">
+      <h4><%= card.answer %></h4>
+    </div>
+  </div>
 
   <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
     <%= f.input :evaluation, as: :hidden, input_html: { value: :bad } %>
