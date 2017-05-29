@@ -11,7 +11,7 @@ class SharesController < ApplicationController
     flash[:alert] = "Already shared with this classroom" unless @share.valid?
     # notfiy student
     # TODO: refacto avec un job
-    # NotifyStudent.perform_now
+    #  NotifyStudent.perform_now
     # ============================
     @share.classroom.students.each do |student|
       # notify student
