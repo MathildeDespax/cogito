@@ -1,9 +1,12 @@
 .quizz_card {
   background-color: #fff;
+  background-size: cover;
   position: relative;
-  height: 300px;
+  height: 270px;
+  width: 270px;
   transition: padding 0.25s ease-out, width 0.25s linear;
-  margin: 20px;
+  margin: 5px;
+  border: 10px solid white;
 
   .quizz_card-inner {
     position: absolute;

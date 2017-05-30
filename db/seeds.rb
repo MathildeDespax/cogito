@@ -49,12 +49,12 @@ puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
 
-first_world_war = Quizz.create!(name:"First World War", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496132559/cogito/history.jpg")
+first_world_war = Quizz.create!(name:"First World War", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496138173/cogito/firstworldwar.jpg")
 plate_tectonic = Quizz.create!(name:"Plate Tectonic", subject: "BIOLOGY", teacher: teacher2)
 maths = Quizz.create!(name:"Maths", subject: "MATHS", teacher: teacher3)
-fith_republic = Quizz.create!(name:"5th republic", subject: "HISTORY", teacher: teacher1)
-second_world_war = Quizz.create!(name:"Second World War", subject: "HISTORY", teacher: teacher1)
-industrial_revolution = Quizz.create!(name:"Industrial Revolution", subject: "HISTORY", teacher: teacher1)
+fith_republic = Quizz.create!(name:"5th republic", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496138448/cogito/fifthrepublique.jpg")
+second_world_war = Quizz.create!(name:"Second World War", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496137682/cogito/secondworldwar.jpg")
+industrial_revolution = Quizz.create!(name:"Industrial Revolution", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496137901/cogito/industrial_revolution.jpg")
 relativity = Quizz.create!(name:"The General Relativity Theory", subject: "PHYSICS", teacher: teacher3)
 photosynthesis = Quizz.create!(name:"Photosynthesis", subject: "BIOLOGY", teacher: teacher2)
 growth = Quizz.create!(name:"The limits to growth", subject: "ECONOMICS", teacher: teacher4)
