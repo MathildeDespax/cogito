@@ -49,11 +49,11 @@ puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
 first_world_war = Quizz.create!(name:"First World War", subject: "HISTORY", teacher: teacher1)
-plate_tectonic = Quizz.create!(name:"PLate Tectonic", subject: "BIOLOGY", teacher: teacher2)
+plate_tectonic = Quizz.create!(name:"Plate Tectonic", subject: "BIOLOGY", teacher: teacher2)
 maths = Quizz.create!(name:"Maths", subject: "MATHS", teacher: teacher3)
-fith_republic = Quizz.create!(name:"5th_republic", subject: "HISTORY", teacher: teacher1)
-second_world_war = Quizz.create!(name:"second_world_war", subject: "HISTORY", teacher: teacher1)
-industrial_revolution = Quizz.create!(name:"industrial_revolution", subject: "HISTORY", teacher: teacher1)
+fith_republic = Quizz.create!(name:"5th republic", subject: "HISTORY", teacher: teacher1)
+second_world_war = Quizz.create!(name:"Second World War", subject: "HISTORY", teacher: teacher1)
+industrial_revolution = Quizz.create!(name:"Industrial Revolution", subject: "HISTORY", teacher: teacher1)
 relativity = Quizz.create!(name:"The General Relativity Theory", subject: "PHYSICS", teacher: teacher3)
 photosynthesis = Quizz.create!(name:"Photosynthesis", subject: "BIOLOGY", teacher: teacher2)
 growth = Quizz.create!(name:"The limits to growth", subject: "ECONOMICS", teacher: teacher4)
@@ -146,7 +146,7 @@ quizzs_data = [
   {  quizz: maths,
     question: "Comment calcule-t-on l'aire d'un triangle ?",
     answer:"(base x hauteur) : 2"
-    },
+  },
   { quizz: maths,
     question: "Quel est le périmètre d'un carré de 7 cm de côté ?", answer:"28 cm (explications : 7 x 4 = 28)"
   },
