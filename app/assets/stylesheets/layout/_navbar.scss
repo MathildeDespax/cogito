@@ -12,9 +12,9 @@
 
 /* Navbar logo */
 .navbar-cogito-logo img {
-  width: 35px;
-  background-color: white;
-
+  width: 25px;
+  background-color: #F5F7FA;
+  color: #33658A;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -29,7 +29,7 @@
   flex: 0 1 auto;
   cursor: pointer;
   padding: 0 20px;
-  color: white;
+  color: #33658A;
 }
 
 /* Navbar standard link */
@@ -38,27 +38,27 @@
   font-size: 20px;
 }
 .navbar-cogito-link:hover {
-  color: #da552f;
+  color: #33658A;
   text-decoration: none;
 }
 
 /* Navbar dropdown menu */
 .navbar-cogito-dropdown-menu {
   margin-top: 15px;
-  box-shadow: 1px 1px 4px #74A2D3;
+  box-shadow: 1px 1px 4px #33658A;
   border-color: #74A2D3;
 }
 .navbar-cogito-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #74A2D3 !important;
+  color: #33658A !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
 }
 .navbar-cogito-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: #74A2D3 !important;
+  color: #33658A !important;
 }
 .navbar-cogito-dropdown-menu:before {
   content: ' ';
@@ -69,6 +69,6 @@
   top: -6px;
   background-color: white;
   transform: rotate(45deg);
-  border-left: 1px solid #74A2D3;
-  border-top: 1px solid #74A2D3;
+  border-left: 1px solid #33658A;
+  border-top: 1px solid #33658A;
 }
