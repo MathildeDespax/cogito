@@ -3,7 +3,7 @@
     <h1>My classrooms</h1>
     <div class="content">
       <div class="form">
-        <%= link_to "Back to index", quizzs_path %>
+        <%= link_to "Back to my quizzes", quizzs_path, class: "btn btn-danger" %>
         <% @classrooms.each do |classroom| %>
           <h2><%= classroom.name  %></h2>
           <%= link_to "View results", classroom_path(classroom), method: :get %>

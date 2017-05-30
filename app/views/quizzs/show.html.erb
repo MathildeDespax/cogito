@@ -5,7 +5,6 @@
     <br><%= link_to "Edit", edit_quizz_path(@quizz) %>
     <br><%= link_to "Finish quizz", quizzs_path %>
     <br><%= link_to "Delete", quizz_path(@quizz), method: :delete %>
-    <h2>All cards</h2>
     <% @quizz.shares.each do |share| %>
     <p> This has been sent to <%=share.classroom.name %> on <%=share.created_at%></p>
     <% end %>
