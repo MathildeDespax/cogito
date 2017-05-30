@@ -62,11 +62,11 @@
 
 .card-plus {
   padding-top: 50px;
-  background-color: rgb(191, 247, 150);
+  background-color: #F2EA57;
   color: white;
   border: 2px solid white;
   &:hover {
-    background-color: rgb(158, 226, 106);
+    background-color: #F2E600;
     box-shadow: 3px 3px 3px rgb(235, 235, 235);
   }
 
@@ -83,17 +83,17 @@
 }
 
 .btn-home {
-  background-color: rgb(158, 226, 106);
+  background-color: #F2EA57 ;
   width: 150px;
   padding: 5px;
   margin: auto;
   font-size: 25px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 20px;
   margin-top: 50px;
   border: 2px solid white;
   &:hover {
-    background-color: rgb(191, 247, 150);
+    background-color: #F2E600;
   }
   &:active {
     background-color: white;
@@ -108,16 +108,16 @@
 }
 
 .fa-square-o {
-  color: rgb(255, 172, 40);
+  color: #C7C5C9;
   text-shadow: 3px 3px rgb(235, 235, 235);
 }
 
 .fa-users {
-  color: rgb(208, 0, 255);
+  color: #C7C5C9;
   text-shadow: 3px 3px rgb(235, 235, 235);
 }
 
 .fa-bar-chart {
-  color: rgb(144, 119, 255);
+  color: #C7C5C9;
   text-shadow: 3px 3px rgb(235, 235, 235);
 }
