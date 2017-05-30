@@ -60,6 +60,7 @@ photosynthesis = Quizz.create!(name:"Photosynthesis", subject: "BIOLOGY", teache
 growth = Quizz.create!(name:"The limits to growth", subject: "ECONOMICS", teacher: teacher4)
 naturalism = Quizz.create!(name:"Naturalism", subject: "LITTERATURE", teacher: teacher4)
 globalisation = Quizz.create!(name:"Globalisation", subject: "GEOGRAPHY", teacher: teacher6)
+
 puts 'done'
 
 print 'Seeding cards'.ljust(LJUST_MAX, '.')
@@ -188,23 +189,23 @@ classrooms_attributes = [
   },
   {
     name: "TerminalA",
-    teacher: teacher3
+    teacher: teacher1
   },
   {
     name: "TerminalB",
-    teacher: teacher4
+    teacher: teacher2
   },
   {
     name: "Seconde3",
-    teacher: teacher5
+    teacher: teacher1
   },
   {
     name: "Seconde4",
-    teacher: teacher5
+    teacher: teacher3
   },
   {
     name: "Seconde2",
-    teacher: teacher1
+    teacher: teacher3
   }
 ]
 puts 'done'
