@@ -49,17 +49,18 @@ puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
 
-first_world_war = Quizz.create!(name:"First World War", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496138173/cogito/firstworldwar.jpg")
-plate_tectonic = Quizz.create!(name:"Plate Tectonic", subject: "BIOLOGY", teacher: teacher2, photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1496145657/cogito/tectonique.jpg")
-maths = Quizz.create!(name:"Maths", subject: "MATHS", teacher: teacher2, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496071900/cogito/maths_bpcjhj.jpg")
-fith_republic = Quizz.create!(name:"5th republic", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496138448/cogito/fifthrepublique.jpg")
-second_world_war = Quizz.create!(name:"Second World War", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496137682/cogito/secondworldwar.jpg")
-industrial_revolution = Quizz.create!(name:"Industrial Revolution", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496137901/cogito/industrial_revolution.jpg")
-relativity = Quizz.create!(name:"The General Relativity Theory", subject: "PHYSICS", teacher: teacher2, photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1496145213/cogito/relativity.jpg")
-photosynthesis = Quizz.create!(name:"Photosynthesis", subject: "BIOLOGY", teacher: teacher2, photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1496145318/cogito/photosynthesis.jpg")
-growth = Quizz.create!(name:"The limits to growth", subject: "ECONOMICS", teacher: teacher3, photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1496072368/cogito/economics_yeob5b.jpg")
-naturalism = Quizz.create!(name:"Naturalism", subject: "LITTERATURE", teacher: teacher3, photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1496071863/cogito/litterature_bfxlw9.jpg")
-globalisation = Quizz.create!(name:"Globalisation", subject: "GEOGRAPHY", teacher: teacher1, photo_url:"http://res.cloudinary.com/dcsrdzgza/image/upload/v1496071858/cogito/geography_ulydo6.jpg")
+first_world_war = Quizz.create!(name:"First World War", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496132559/cogito/history.jpg")
+plate_tectonics = Quizz.create!(name:"Plate Tectonics", subject: "BIOLOGY", teacher: teacher2)
+geometry = Quizz.create!(name:"Geometry", subject: "MATHS", teacher: teacher3)
+fith_republic = Quizz.create!(name:"5th republic", subject: "HISTORY", teacher: teacher1)
+second_world_war = Quizz.create!(name:"Second World War", subject: "HISTORY", teacher: teacher1)
+industrial_revolution = Quizz.create!(name:"Industrial Revolution", subject: "HISTORY", teacher: teacher1)
+relativity = Quizz.create!(name:"The General Relativity Theory", subject: "PHYSICS", teacher: teacher3)
+photosynthesis = Quizz.create!(name:"Photosynthesis", subject: "BIOLOGY", teacher: teacher2)
+growth = Quizz.create!(name:"The limits to growth", subject: "ECONOMICS", teacher: teacher4)
+naturalism = Quizz.create!(name:"Naturalism", subject: "LITTERATURE", teacher: teacher4)
+globalisation = Quizz.create!(name:"Globalisation", subject: "GEOGRAPHY", teacher: teacher6)
+
 puts 'done'
 
 print 'Seeding cards'.ljust(LJUST_MAX, '.')
@@ -108,68 +109,68 @@ quizzs_data = [
     quizz: first_world_war,
     question: "Qui gagne la Première Guerre mondiale ?", answer:" Les Français, les Anglais, les Américains et les Italiens"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Qu’est-ce que la subduction ?", answer:" C’est l’enfoncement de la plaque lithosphérique océanique dans le manteau lithosphérique"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " De quels fragments les ophiolites présents dans une chaîne de montagnes sont-ils à l’origine?", answer:" La croûte continentale"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Sous quel état les roches métamorphiques subissent-elles des changements ? ", answer:"à l’état solide"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Sous quel état les roches métamorphiques subissent-elles des changements ? ", answer:" La croûte continentale"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Une ancienne marge continentale passive est caractérisée par ?", answer:"faille normale + roches sédimentaires"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Quel est le type des chaînes alpines?", answer:"des chaînes de collision"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Qu’est-ce que l’obduction?", answer:" C’est la collision entre deux croûtes continentales"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Quel est le type des chaînes alpines?", answer:"des chaînes de collision"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Qu’est-ce que le moteur de la subduction ?", answer:" c’est la différence de densité entre l’asthénosphère et la croûte océanique"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Quelles sont les étapes mécaniques de la formation des chaînes alpines ?", answer:" Extension+ subduction+obduction+sédimentation"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Quels sont les témoins d’une collision ?", answer:" Les failles inverses, pli, nappe de charriage"
   },
-  { quizz: plate_tectonic,
+  { quizz: plate_tectonics,
     question: " Quels sont les indices minéralogiques d’une collision ?", answer:" Les roches métamorphiques"
   },
-  {  quizz: maths,
+  {  quizz: geometry,
     question: "Comment calcule-t-on l'aire d'un triangle ?",
     answer:"(base x hauteur) : 2"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Quel est le périmètre d'un carré de 7 cm de côté ?", answer:"28 cm (explications : 7 x 4 = 28)"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Combien de côtés a un dodécagone ?", answer:"12 (explications : Un polygone a 9 côtés est un ennéagone ou nonagone. | U n polygone a 10 côtés est un décagone)"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Comment appelle-t-on des droites du plan qui ne se coupent pas ?", answer:"Des droites parallèles"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Quel est le deuxième nom du pavé ?", answer:"Parallélépipède rectangle"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Quelle est la forme des faces d'un tétraèdre ?", answer:"Triangulaire"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Combien de côtés a un heptagone ?", answer:"7 (explications : Un polygone a 6 côtés est un hexagone. Un polygone a 8  côtés est un octogone)"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Peut-on construire un angle droit avec un compas et une règle ?", answer: "Oui"
   },
-  { quizz: maths,
+  { quizz: geometry,
     question: "Combien de chèvres ?", answer:"12"
   }
 ]

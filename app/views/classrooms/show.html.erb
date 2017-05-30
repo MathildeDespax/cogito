@@ -1,25 +1,27 @@
-<h1><%= @classroom.name %></h1>
-
-<%= link_to "Back to classrooms", classrooms_path %>
-
-<% @quizzs.each do |quizz| %>
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingOne">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%=quizz.id%>" aria-expanded="true" aria-controls="collapseOne">
-            <%= quizz.name %>
-          </a>
-        </h4>
-      </div>
-      <div id="collapse<%=quizz.id%>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body">
-        <h3>Quizz results</h3>
-          <%= pie_chart @classroom.piechart(quizz) %>
-        <h3>Questions results</h3>
-          <%= bar_chart @classroom.chart_stat(quizz), stacked: true %>
+<div class="super-wrapper">
+  <div class="container">
+    <h1><%= @classroom.name %></h1>
+    <%= link_to "Back to classrooms", classrooms_path %>
+    <% @quizzs.each do |quizz| %>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%=quizz.id%>" aria-expanded="true" aria-controls="collapseOne">
+                <%= quizz.name %>
+              </a>
+            </h4>
+          </div>
+          <div id="collapse<%=quizz.id%>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+            <h3>Quizz results</h3>
+              <%= pie_chart @classroom.piechart(quizz) %>
+            <h3>Questions results</h3>
+              <%= bar_chart @classroom.chart_stat(quizz), stacked: true %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
-<% end %>
+</div>
