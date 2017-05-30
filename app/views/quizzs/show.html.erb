@@ -1,20 +1,48 @@
-<div class="wrapper-form">
-  <div class="container">
-    <h1>Name: <%= @quizz.name %></h1>
-    <h3>Subject: <%= @quizz.subject %></h3>
-    <br><%= link_to "Edit", edit_quizz_path(@quizz) %>
-    <br><%= link_to "Finish quizz", quizzs_path %>
-    <br><%= link_to "Delete", quizz_path(@quizz), method: :delete %>
-    <h2>All cards</h2>
-    <% @quizz.shares.each do |share| %>
-    <p> This has been sent to <%=share.classroom.name %> on <%=share.created_at%></p>
-    <% end %>
-    <div class="content">
-      <div class="form">
-        <%= render "cards/index" %>
-        <p> Add a new question </p>
-        <%= render "cards/form" %>
-      </div>
+<% content_for(:body_class, "quizz-show") %>
+<% content_for(:footer_class, "hidden") %>
+
+<div class="body-edition">
+  <div class="quizz-edition">
+    <div class="quizz-picture">
+
+    </div>
+    <div class="quizz-edition-titles">
+      <h4><%= @quizz.name %></h4>
+      <h6><%= @quizz.subject %></h6>
+    </div>
+    <div class="quizz-edition-btns">
+        <!-- <h4> Add a new card </h4>
+        <%= render "cards/form" %> -->
+      <span class="btn btn-primary"><%= link_to "Save", quizzs_path %></span>
+      <span class="btn btn-danger"><%= link_to "Delete", quizz_path(@quizz), method: :delete %></span>
+    </div>
+    <div class="quizz-edition-shares">
+      <h6>Shared to :</h6>
+       <% @quizz.shares.each do |share| %>
+       <p><%=share.classroom.name %> on <%=share.created_at%></p>
+        <% end %>
     </div>
   </div>
+
+  <div class="cards-edition">
+  <!-- <div class="avatar-card" style="background-image: url(<%= asset_path('add-card') %>);"></div> -->
+
+<a href="#"><img src="<%= asset_path('add-cart') %>" alt="add"></a>
+
+  <% @quizz.cards.each do |card| %>
+    <div class="saved-card">
+      <div class="saved-card-front">
+         <p><span>FRONT</span><strong><%= card.question %></strong></p>
+
+      </div>
+      <div class="saved-card-back">
+        <p><span>BACK</span><%= card.answer %></p>
+      </div>
+    </div>
+    <%= link_to "Delete", card_path(card), method: :delete %> <%= link_to "Edit", edit_card_path(card) %>
+    <% end %>
+
+  </div>
 </div>
+
+
