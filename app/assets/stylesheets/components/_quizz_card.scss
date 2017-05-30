@@ -2,11 +2,12 @@
   background-color: #fff;
   background-size: cover;
   position: relative;
-  height: 270px;
-  width: 270px;
+  height: 260px;
+  width: 260px;
   transition: padding 0.25s ease-out, width 0.25s linear;
-  margin: 5px;
   border: 10px solid white;
+  color: white;
+  margin-bottom: 10px;
 
   .quizz_card-inner {
     position: absolute;
@@ -37,12 +38,16 @@
 }
 
 .quizz_category{
+  position: absolute;
   padding-top: 3px;
   padding-left: 5px;
 }
 
 .quizz_name{
-  padding-top: 10px;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  font-size: 30px;
 }
 
 .action{
