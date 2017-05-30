@@ -1,6 +1,19 @@
-<h1>Classrooms</h1>
-<%= link_to "Back to index", quizzs_path %>
-<% @classrooms.each do |classroom| %>
-  <h2><%= classroom.name  %></h2>
-  <%= link_to "View results", classroom_path(classroom), method: :get %>
-<% end %>
+<div class="super-wrapper">
+  <div class="intro">
+    <h1>Quizz Analysis</h1>
+    <h3>Select a classroom</h3>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <% @classrooms.each do |classroom| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= link_to classroom_path(classroom) do %>
+          <div class="classroom_card shadow-z-1">
+          <div><%= classroom.name%></div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

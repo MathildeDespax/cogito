@@ -1,10 +1,11 @@
-<div class="wrapper-form">
+<div class="super-wrapper">
   <div class="container">
     <h1>Create a quizz</h1>
     <div class="content">
       <div class="form">
         <%= render 'form' %>
-        <%= link_to "Back", quizzs_path, method: :get %>
+        <br>
+        <%= link_to "Back to my quizzes", quizzs_path, method: :get, class: "btn btn-danger"%>
       </div>
     </div>
   </div>
