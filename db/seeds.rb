@@ -32,7 +32,10 @@ puts 'Creating users ...'
 students = []
 teacher1 = User.create!(first_name: "Anthony", last_name: "Larzilliere", email: "anthony@cogito.com", password:"cogito1234")
 teacher2 = User.create!(first_name: "Sylvain", last_name: "Peigney", email: "sylvain@cogito.com", password:"cogito1234")
-teacher3 = User.create!(first_name: "Bobby", last_name: "Lapointe", email: "boby@cogito.com", password:"cogito1234")
+teacher3 = User.create!(first_name: "Charles", last_name: "Pernet", email: "charles@cogito.com", password:"cogito1234")
+teacher4 = User.create!(first_name: "Professeur", last_name: "Tournesol", email: "tournesol@cogito.com", password:"cogito1234")
+teacher5 = User.create!(first_name: "Albert", last_name: "Einstein", email: "albert@cogito.com", password:"cogito1234")
+teacher6 = User.create!(first_name: "Bobby", last_name: "Lapointe", email: "boby@cogito.com", password:"cogito1234")
 students << student1 = User.create!(first_name: "Mathilde", last_name: "Despax", email: "mathilde@cogito.com", password:"cogito1234")
 students << student2 = User.create!(first_name: "Bastien", last_name: "Pinot", email: "bastien@cogito.com", password:"cogito1234")
 students << student3 = User.create!(first_name: "Gregory", last_name: "Debargue", email: "gregory@cogito.com", password:"cogito1234")
@@ -45,9 +48,18 @@ students << student9 = User.create!(first_name: "Steevy", last_name: "Jacket", e
 puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
-first_world_war = Quizz.create!(name:"First World War", subject: "History", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496132559/cogito/history.jpg")
-plate_tectonic = Quizz.create!(name:"PLate Tectonic", subject: "SVT", teacher: teacher2)
+
+first_world_war = Quizz.create!(name:"First World War", subject: "HISTORY", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496132559/cogito/history.jpg")
+plate_tectonic = Quizz.create!(name:"Plate Tectonic", subject: "BIOLOGY", teacher: teacher2)
 maths = Quizz.create!(name:"Maths", subject: "MATHS", teacher: teacher3)
+fith_republic = Quizz.create!(name:"5th republic", subject: "HISTORY", teacher: teacher1)
+second_world_war = Quizz.create!(name:"Second World War", subject: "HISTORY", teacher: teacher1)
+industrial_revolution = Quizz.create!(name:"Industrial Revolution", subject: "HISTORY", teacher: teacher1)
+relativity = Quizz.create!(name:"The General Relativity Theory", subject: "PHYSICS", teacher: teacher3)
+photosynthesis = Quizz.create!(name:"Photosynthesis", subject: "BIOLOGY", teacher: teacher2)
+growth = Quizz.create!(name:"The limits to growth", subject: "ECONOMICS", teacher: teacher4)
+naturalism = Quizz.create!(name:"Naturalism", subject: "LITTERATURE", teacher: teacher4)
+globalisation = Quizz.create!(name:"Globalisation", subject: "GEOGRAPHY", teacher: teacher6)
 puts 'done'
 
 print 'Seeding cards'.ljust(LJUST_MAX, '.')
@@ -135,7 +147,7 @@ quizzs_data = [
   {  quizz: maths,
     question: "Comment calcule-t-on l'aire d'un triangle ?",
     answer:"(base x hauteur) : 2"
-    },
+  },
   { quizz: maths,
     question: "Quel est le périmètre d'un carré de 7 cm de côté ?", answer:"28 cm (explications : 7 x 4 = 28)"
   },
@@ -172,19 +184,27 @@ classrooms_attributes = [
   },
   {
     name: "TerminalC",
-    teacher: teacher1
+    teacher: teacher2
   },
   {
     name: "TerminalA",
-    teacher: teacher1
-  },
-  {
-    name: "TerminalB",
     teacher: teacher3
   },
   {
+    name: "TerminalB",
+    teacher: teacher4
+  },
+  {
     name: "Seconde3",
-    teacher: teacher2
+    teacher: teacher5
+  },
+  {
+    name: "Seconde4",
+    teacher: teacher5
+  },
+  {
+    name: "Seconde2",
+    teacher: teacher1
   }
 ]
 puts 'done'
