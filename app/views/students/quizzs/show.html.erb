@@ -1,6 +1,6 @@
-<div class="container">
-    <h1><%= @quizz.subject.upcase %></h1>
-    <h2><%= @quizz.name %></h2>
+<div class="container title-container">
+  <h1><%= @quizz.subject.upcase %></h1>
+  <h2><%= @quizz.name %></h2>
 </div>
 
 <div class="container card-container">
@@ -17,14 +17,10 @@
           <%= f.submit 'Did not know', class: "btn btn-danger"  %>
         <% end %>
 
-
-
         <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
           <%= f.input :evaluation, as: :hidden, input_html: { value: :soso } %>
           <%= f.submit 'Shaky', class: "btn btn-warning"  %>
         <% end %>
-
-
 
         <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
           <%= f.input :evaluation, as: :hidden, input_html: { value: :good } %>
@@ -36,6 +32,6 @@
   <% end %>
 
   <div class="finished">
-    Youpi tralala
+    Quizz done!
   </div>
 </div>
