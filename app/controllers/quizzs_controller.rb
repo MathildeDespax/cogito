@@ -42,6 +42,6 @@ class QuizzsController < ApplicationController
 
   private
   def quizz_params
-    params.require(:quizz).permit(:name, :subject)
+    params.require(:quizz).permit(:name, :subject, :photo)
   end
 end
