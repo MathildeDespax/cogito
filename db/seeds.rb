@@ -45,7 +45,7 @@ students << student9 = User.create!(first_name: "Steevy", last_name: "Jacket", e
 puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
-first_world_war = Quizz.create!(name:"First World War", subject: "History", teacher: teacher1)
+first_world_war = Quizz.create!(name:"First World War", subject: "History", teacher: teacher1, photo_url: "http://res.cloudinary.com/dcsrdzgza/image/upload/v1496132559/cogito/history.jpg")
 plate_tectonic = Quizz.create!(name:"PLate Tectonic", subject: "SVT", teacher: teacher2)
 maths = Quizz.create!(name:"Maths", subject: "MATHS", teacher: teacher3)
 puts 'done'
