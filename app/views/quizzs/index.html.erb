@@ -12,13 +12,11 @@
 <div class="container">
   <div class="row">
   <% @quizzs.each do |quizz| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="quizz_card shadow-z-1 ">
+    <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+      <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('<%= cl_image_path quizz_photo_url(quizz), height: 300, width: 400, crop: :fill %>')">
         <div class="quizz_category"><%= quizz.subject.upcase  %></div>
         <div class="quizz_name text-center"><%= quizz.name  %></div>
-        <% if quizz.photo? %>
-  <%= cl_image_tag quizz.photo.path, width: 200, height: 300, crop: :fill %>
-<% end %>
+
         <p class="details"><%= link_to "see", quizz_path(quizz), method: :get %></p>
           <%= link_to quizzs_path do %>
             <i class="fa fa-trash-o"></i>
@@ -32,6 +30,4 @@
   </div>
 </div>
 </div>
-
-
 
