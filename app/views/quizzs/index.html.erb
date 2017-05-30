@@ -14,8 +14,8 @@
   <% @quizzs.each do |quizz| %>
     <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
       <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('<%= cl_image_path quizz_photo_url(quizz), height: 300, width: 400, crop: :fill %>')">
-        <div class="quizz_category"><%= quizz.subject.upcase  %></div>
-        <div class="quizz_name text-center"><%= quizz.name  %></div>
+        <div class="quizz_card_category"><%= quizz.subject.upcase  %></div>
+        <div class="quizz_card_name text-center"><%= quizz.name  %></div>
 
         <div class="details">
           <%= link_to quizz_path(quizz) do %>
