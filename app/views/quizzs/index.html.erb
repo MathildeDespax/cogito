@@ -1,3 +1,4 @@
+<div class="super-wrapper">
 <h1 class="text-center">My Quizzes</h1>
 
 <div class="action text-center">
@@ -19,10 +20,17 @@
   <%= cl_image_tag quizz.photo.path, width: 200, height: 300, crop: :fill %>
 <% end %>
         <p class="details"><%= link_to "see", quizz_path(quizz), method: :get %></p>
+          <%= link_to quizzs_path do %>
+            <i class="fa fa-trash-o"></i>
+          <% end %>
+          <%= link_to quizzs_path do %>
+            <i class="fa fa-pencil"></i>
+          <% end %>
       </div>
     </div>
   <% end %>
   </div>
+</div>
 </div>
 
 
