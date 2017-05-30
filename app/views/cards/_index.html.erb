@@ -1,7 +1,12 @@
-<% @quizz.cards.each do |card| %>
-  <p><strong><%= card.question %></strong></p>
-  <p><%= card.answer %></p>
-  <%= link_to "Delete", card_path(card), method: :delete %> <%= link_to "Edit", edit_card_path(card) %>
-<% end %>
+
+
+  <% @quizz.cards.each do |card| %>
+  <div class="card-index">
+    <p><strong><%= card.question %></strong></p>
+    <p><%= card.answer %></p>
+    <%= link_to "Delete", card_path(card), method: :delete %> <%= link_to "Edit", edit_card_path(card) %>
+</div>
+  <% end %>
+
 
 
