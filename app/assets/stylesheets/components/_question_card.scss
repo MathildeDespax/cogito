@@ -13,7 +13,8 @@
 
 .card {
    height: 300px;
-   width: 500px;
+   width: 100%;
+   max-width: 600px;
    position: relative;
    border-radius: 30px;
    transform-style: preserve-3d;
