@@ -56,7 +56,7 @@
 // Quizz show body
 
 .body-edition {
-  background-color: rgb(244, 244, 244);
+  background-color: white;
   height: 100%;
   display: flex;
   align-items: stretch;
@@ -76,41 +76,47 @@
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
 
 }
 
 
 .quizz-picture {
-  width: 60%;
+  width: 96%;
   margin: auto;
   height: 250px;
-  border: 4px solid white;
   box-shadow: 2px 2px 2px grey;
   background-color: rgb(244, 244, 244);
+  border-radius: 5px;
 }
 
 .quizz-edition-titles {
-  border: 1px solid black;
   width: auto;
   margin: 10px;
-  text-align: center;
+  margin-left: 50px;
+  text-align: left;
+
 
 }
 
 .quizz-edition-shares {
-  border: 1px solid black;
+
   width: auto;
   margin: 10px;
   text-align: center;
+  margin-left: 50px;
+  text-align: left;
 }
 .quizz-edition-btns {
-  border: 1px solid black;
+
   width: auto;
   margin: 10px;
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-left: 50px;
+  text-align: left;
 }
 
 .quizz-edition-btns > span {
@@ -128,6 +134,7 @@
   margin: 20px 40px 20px 10px;
   position: relative;
   overflow-y: scroll;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
 
 }
 
@@ -136,25 +143,49 @@
   width: 95%;
   height: 140px;
   margin: 10px 40px 10px 10px;
+  padding-left: 40px;
+  border-radius: 20px;
+  // border: 1px solid black;
+  position: relative;
+  box-shadow: 2px 2px 2px grey;
+  background-color: rgb(157, 159, 160);
 
-  border-radius: 10px;
+
+}
+
+.saved-card > span{
+  color: rgb(235, 235, 235);
+}
+
+.card-position {
+  position: absolute;
+  left: 17px;
+  top: 57px;
 }
 
 .saved-card-front {
   height: 50%;
   width: 100%;
-  border: 1px solid black;
-  background-color: rgb(244, 244, 244);
-  border-radius: 10px 10px 0px 0px;
+  // border: 1px solid black;
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+  padding-top: 5px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
 
 }
 
 .saved-card-back {
   height: 50%;
   width: 100%;
-  border: 1px solid black;
-  background-color: rgb(244, 244, 244);
+  // border: 1px solid black;
+  background-color: rgb(214, 209, 209);
   border-radius: 0px 0px 10px 10px;
+  text-align: center;
+  padding-top: 5px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
 }
 
 .quizz-show {

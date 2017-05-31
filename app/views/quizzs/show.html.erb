@@ -3,46 +3,75 @@
 
 <div class="body-edition">
   <div class="quizz-edition">
-    <div class="quizz-picture">
-
+    <div class="quizz-picture" style="background-image: url('<%= cl_image_path quizz_photo_url(@quizz), height: 300, width: 400, crop: :fill %>')">
     </div>
     <div class="quizz-edition-titles">
       <h4><%= @quizz.name %></h4>
       <h6><%= @quizz.subject %></h6>
     </div>
     <div class="quizz-edition-btns">
-        <!-- <h4> Add a new card </h4>
-        <%= render "cards/form" %> -->
+
+
+         <a data-toggle="modal" href="<%= new_quizz_card_path(@quizz) %>" data-target="#myModal2"> Add a new card</a>
+
       <span class="btn btn-primary"><%= link_to "Save", quizzs_path %></span>
       <span class="btn btn-danger"><%= link_to "Delete", quizz_path(@quizz), method: :delete %></span>
+
     </div>
     <div class="quizz-edition-shares">
       <h6>Shared to :</h6>
-       <% @quizz.shares.each do |share| %>
-       <p><%=share.classroom.name %> on <%=share.created_at%></p>
-        <% end %>
+      <p>
+        <span>
+           <% @quizz.shares.each do |share| %>
+           <%=share.classroom.name %>
+           <% end %>
+        </span>
+      </p>
     </div>
   </div>
 
   <div class="cards-edition">
   <!-- <div class="avatar-card" style="background-image: url(<%= asset_path('add-card') %>);"></div> -->
 
-<a href="#"><img src="<%= asset_path('add-cart') %>" alt="add"></a>
-
-  <% @quizz.cards.each do |card| %>
+  <% @quizz.cards.each_with_index do |card, i| %>
     <div class="saved-card">
+    <div class="card-position"><span><%= i + 1 %></span></div>
       <div class="saved-card-front">
-         <p><span>FRONT</span><strong><%= card.question %></strong></p>
+         <p><span>FRONT  </span><strong><%= card.question %></strong></p>
 
       </div>
       <div class="saved-card-back">
-        <p><span>BACK</span><%= card.answer %></p>
+        <p><span>BACK </span><%= card.answer %></p>
       </div>
+          <div class="details">
+
+          <a data-toggle="modal" href="<%= edit_card_path(card) %>" data-target="#myModal"> <i class="fa fa-pencil"></i></a>
+          <%= link_to card_path(card), method: :delete do %>
+            <i class="fa fa-trash-o"></i>
+          <% end %>
     </div>
-    <%= link_to "Delete", card_path(card), method: :delete %> <%= link_to "Edit", edit_card_path(card) %>
+    </div>
+
     <% end %>
 
   </div>
 </div>
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<!-- <!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
 
