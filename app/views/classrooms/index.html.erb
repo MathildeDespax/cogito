@@ -1,4 +1,4 @@
-<div class="intro" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url(<%= image_path("test.jpg")%>);">
+<div class="intro" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url(<%= image_path('test.jpg')%>);">
   <h1>Classroom Analysis</h1>
 </div>
 
@@ -9,15 +9,20 @@
 <div class="container">
   <div class="row">
     <% @classrooms.each do |classroom| %>
-      <div class="col-xs-12-offset-4 col-sm-6 col-md-4">
-        <%= link_to classroom_path(classroom) do %>
-          <div class="classroom_card shadow-z-1">
-          <div><%= classroom.name%></div>
-          </div>
-        <% end %>
+      <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+        <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(<%= image_path('pupils.jpg')%>)">
+          <div class="quizz_card_name text-center"><%= classroom.name%></div>
+        </div>
       </div>
     <% end %>
+    <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+      <%= link_to classrooms_path  do %>
+        <div id="addquizz", class="quizz_card shadow-z-1">
+          <i class="fa fa-plus-square" aria-hidden="true"></i>
+          <h3>Add a classroom</h3>
+        </div>
+      <%end%>
+    </div>
   </div>
 </div>
-
 
