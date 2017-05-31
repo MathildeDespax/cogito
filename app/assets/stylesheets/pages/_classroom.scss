@@ -1,16 +1,18 @@
-.super-wrapper-classroom {
-  min-height: calc(100vh - 120px);
-  text-align: center;
-  padding-top: 80px;
+.intro {
+  margin-bottom: 80px;
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-
-.intro h1{
+.intro h1 {
   padding-top: 80px;
   text-align: center;
   margin-top: 0;
+
 }
 
-.intro h3{
+.intro h3 {
   text-align: center;
 }
