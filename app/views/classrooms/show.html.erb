@@ -1,40 +1,38 @@
-<div class="super-wrapper">
-  <div class="container">
-    <h1><%= @classroom.name %></h1>
-      <%= link_to "Back to classrooms", classrooms_path, class: "btn btn-danger"  %>
-    <div class="content">
-      <div class="form">
-        <% @quizzs.each do |quizz| %>
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="container">
+  <h1><%= @classroom.name %></h1>
+    <%= link_to "Back to classrooms", classrooms_path, class: "btn btn-danger"  %>
+  <div class="content">
+    <div class="form">
+      <% @quizzs.each do |quizz| %>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-            <div class="panel panel-default">
+          <div class="panel panel-default">
 
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%=quizz.id%>" aria-expanded="true" aria-controls="collapseOne">
-                    <%= quizz.name %>
-                  </a>
-                </h4>
-              </div>
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%=quizz.id%>" aria-expanded="true" aria-controls="collapseOne">
+                  <%= quizz.name %>
+                </a>
+              </h4>
+            </div>
 
-              <div id="collapse<%=quizz.id%>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" >
-                <div class="panel-body">
-                  <div class="col-xs-12 col-md-6">
-                    <h3>Quizz results</h3>
-                    <%= pie_chart @classroom.piechart(quizz), width: "100%" %>
-                  </div>
-                  <div class="col-xs-12 col-md-6">
-                    <h3>Cards results</h3>
-                    <%= bar_chart @classroom.chart_stat(quizz), stacked: true, width: "100%" %>
-                  </div>
+            <div id="collapse<%=quizz.id%>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" >
+              <div class="panel-body">
+                <div class="col-xs-12 col-md-6">
+                  <h3>Quizz results</h3>
+                  <%= pie_chart @classroom.piechart(quizz), width: "100%" %>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <h3>Cards results</h3>
+                  <%= bar_chart @classroom.chart_stat(quizz), stacked: true, width: "100%" %>
                 </div>
               </div>
-
             </div>
 
           </div>
-        <% end %>
-      </div>
+
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

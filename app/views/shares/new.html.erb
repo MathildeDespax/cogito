@@ -1,16 +1,15 @@
-<div class="super-wrapper">
-  <div class="container">
-    <h1>Share a quizz</h1>
-    <div class="content">
-      <div class="form">
-        <%= simple_form_for [@quizz, @share] do |f| %>
-          <%= f.input :quizz_id, collection: @quizzs  %>
-          <%= f.input :classroom_id, collection: @classrooms %>
-          <%= f.submit "Share", class: "btn btn-success" %>
-          <br><br>
-          <%= link_to "Back to my quizzes", quizzs_path, method: :get, class: "btn btn-danger"%>
-        <% end %>
-      </div>
+<div class="container">
+  <h1>Share a quizz</h1>
+  <div class="content">
+    <div class="form">
+      <%= simple_form_for [@quizz, @share] do |f| %>
+        <%= f.input :quizz_id, collection: @quizzs  %>
+        <%= f.input :classroom_id, collection: @classrooms %>
+        <%= f.submit "Share", class: "btn btn-success" %>
+        <br><br>
+        <%= link_to "Back to my quizzes", quizzs_path, method: :get, class: "btn btn-danger"%>
+      <% end %>
     </div>
   </div>
 </div>
+
