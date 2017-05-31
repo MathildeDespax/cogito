@@ -1,4 +1,5 @@
 class QuizzsController < ApplicationController
+  before_filter :disable_nav, only: [:new, :edit]
   def index
     @quizzs = current_user.quizzs
   end
@@ -43,5 +44,10 @@ class QuizzsController < ApplicationController
   private
   def quizz_params
     params.require(:quizz).permit(:name, :subject, :photo)
+  end
+
+
+  def disable_nav
+    @disable_nav = true
   end
 end
