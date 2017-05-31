@@ -1,4 +1,6 @@
-<h1 class="text-center">My Quizzes</h1>
+<div class="intro" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url(<%= image_path("quizzes.jpeg")%>);">
+  <h1>My quizzes</h1>
+</div>
 
 <div class="action text-center">
   <button type="button" class="btn-index"><%= link_to "Create", new_quizz_path, method: :get %></button>
@@ -30,6 +32,16 @@
       </div>
     </div>
   <% end %>
+    <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+      <%= link_to quizzs_path do %>
+        <div class="quizz_card shadow-z-1">
+          <div class="quizz_card_plus_name text-center">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <h3>Add a Quizz</h3>
+          </div>
+        </div>
+      <%end%>
+    </div>
   </div>
 </div>
 

@@ -41,6 +41,12 @@
   padding-left: 4px;
 }
 
+.fa-plus-square {
+  font-size: 100px;
+  color: grey;
+  margin-bottom : 20px;
+}
+
 .quizz_card_category{
   position: absolute;
   padding-top: 3px;
@@ -54,8 +60,16 @@
   font-size: 30px;
 }
 
+.quizz_card_plus_name{
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  font-size: 30px;
+  color: black;
+}
+
 .action{
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
