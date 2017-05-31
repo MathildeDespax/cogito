@@ -2,17 +2,15 @@
   <h1>Classroom Analysis</h1>
 </div>
 
-<div class="action text-center">
-  <button type="button" class="btn-index"><%= link_to "New classroom"%></button>
-</div>
-
 <div class="container">
   <div class="row">
     <% @classrooms.each do |classroom| %>
       <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+        <%= link_to classroom_path(classroom) do %>
         <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(<%= image_path('pupils.jpg')%>)">
           <div class="quizz_card_name text-center"><%= classroom.name%></div>
         </div>
+        <%end%>
       </div>
     <% end %>
     <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
