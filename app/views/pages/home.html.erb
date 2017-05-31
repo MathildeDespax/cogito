@@ -4,9 +4,11 @@
       </br>
       <h3>Boost your students learning confidence by sharing them your own quizzes</h3>
       </br>
-    <div class="btn-home">
-      <%= link_to "GO !", quizzs_path %>
-    </div>
+      <%= link_to quizzs_path do %>
+        <div class="btn-home">
+          <h5>GO !</h5>
+        </div>
+        <%end%>
     <div class="angle-down">
 
       <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -42,7 +44,7 @@
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card-static card-plus">
             <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-            <h3>Create your first Quizz!</h3>
+            <h3>Create your Quizz!</h3>
           </div>
           <%end%>
         </div>
