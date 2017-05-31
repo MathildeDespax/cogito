@@ -6,7 +6,7 @@
 <div class="container">
   <div class="row">
     <% @classrooms.each do |classroom| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="col-xs-12-offset-4 col-sm-6 col-md-4">
         <%= link_to classroom_path(classroom) do %>
           <div class="classroom_card shadow-z-1">
           <div><%= classroom.name%></div>
