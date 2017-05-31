@@ -1,8 +1,13 @@
-<div class="container">
+<div class="intro" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url(<%= image_path("pupils.jpeg")%>);">
   <h1><%= @classroom.name %></h1>
-    <%= link_to "Back to classrooms", classrooms_path, class: "btn btn-danger"  %>
-  <div class="content">
-    <div class="form">
+</div>
+
+<div class="action text-center">
+  <button type="button" class="btn-index"><%= link_to "Back to classrooms", classrooms_path, method: :get %></button>
+</div>
+
+<div class="container">
+  <div class="row">
       <% @quizzs.each do |quizz| %>
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
