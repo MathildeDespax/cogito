@@ -3,24 +3,11 @@
   background-size: cover;
   position: relative;
   height: 260px;
-  width: 260px;
   transition: padding 0.25s ease-out, width 0.25s linear;
   border: 10px solid white;
   color: white;
   margin-bottom: 10px;
 
-  .quizz_card-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    vertical-align: top;
-    font-size: 1rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: left;
-  }
 }
 .shadow-z-1 {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12),0 1px 6px 0 rgba(0, 0, 0, 0.12);
