@@ -1,10 +1,4 @@
 
-.container {
-   margin: 0 auto;
-   padding: 0 30px;
-   text-align: center
-}
-
 .title-container {
   height: 200px;
   width: 500px;
@@ -74,6 +68,7 @@
   }
   &.card-played {
     transform: translateX(2000px);
+    display: none;
   }
   .card-back {
     display: flex;
