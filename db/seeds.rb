@@ -36,15 +36,15 @@ teacher3 = User.create!(first_name: "Charles", last_name: "Pernet", email: "char
 teacher4 = User.create!(first_name: "Professeur", last_name: "Tournesol", email: "tournesol@cogito.com", password:"cogito1234")
 teacher5 = User.create!(first_name: "Albert", last_name: "Einstein", email: "albert@cogito.com", password:"cogito1234")
 teacher6 = User.create!(first_name: "Bobby", last_name: "Lapointe", email: "boby@cogito.com", password:"cogito1234")
-students << student1 = User.create!(first_name: "Mathilde", last_name: "Despax", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student2 = User.create!(first_name: "Bastien", last_name: "Pinot", email: "gdebargue@gmail.com", password:"cogito1234")
+students << student1 = User.create!(first_name: "Mathilde", last_name: "Despax", email: "mathilde@gmail.com", password:"cogito1234")
+students << student2 = User.create!(first_name: "Bastien", last_name: "Pinot", email: "bastien@gmail.com", password:"cogito1234")
 students << student3 = User.create!(first_name: "Gregory", last_name: "Debargue", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student4 = User.create!(first_name: "Josette", last_name: "Dupont", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student5 = User.create!(first_name: "Therese", last_name: "Martin", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student6 = User.create!(first_name: "Julie", last_name: "Lapine", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student7 = User.create!(first_name: "Fanny", last_name: "Robinet", email: "fgdebargue@gmail.com", password:"cogito1234")
-students << student8 = User.create!(first_name: "John", last_name: "Etti", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student9 = User.create!(first_name: "Steevy", last_name: "Jacket", email: "gdebargue@gmail.com", password:"cogito1234")
+students << student4 = User.create!(first_name: "Josette", last_name: "Dupont", email: "josette@gmail.com", password:"cogito1234")
+students << student5 = User.create!(first_name: "Therese", last_name: "Martin", email: "therese@gmail.com", password:"cogito1234")
+students << student6 = User.create!(first_name: "Julie", last_name: "Lapine", email: "julie@gmail.com", password:"cogito1234")
+students << student7 = User.create!(first_name: "Fanny", last_name: "Robinet", email: "fanny@gmail.com", password:"cogito1234")
+students << student8 = User.create!(first_name: "John", last_name: "Etti", email: "john@gmail.com", password:"cogito1234")
+students << student9 = User.create!(first_name: "Steevy", last_name: "Jacket", email: "steevy@gmail.com", password:"cogito1234")
 puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
@@ -181,31 +181,31 @@ Card.create!(quizzs_data)
 puts 'Seeding Classrooms...'
 classrooms_attributes = [
   {
-    name: "1èreA",
+    name: "Première A",
     teacher: teacher1
   },
   {
-    name: "TerminalC",
+    name: "Terminale C",
     teacher: teacher2
   },
   {
-    name: "TerminalA",
+    name: "Terminale A",
     teacher: teacher1
   },
   {
-    name: "TerminalB",
+    name: "Terminale B",
     teacher: teacher2
   },
   {
-    name: "Seconde3",
+    name: "Seconde A",
     teacher: teacher1
   },
   {
-    name: "Seconde4",
+    name: "Seconde B",
     teacher: teacher3
   },
   {
-    name: "Seconde2",
+    name: "Seconde C",
     teacher: teacher3
   }
 ]
