@@ -1,0 +1,21 @@
+.wrapper-form {
+  min-height: calc(100vh - 190px);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.wrapper-form h1 {
+  margin: 0px;
+}
+
+.form {
+  max-width: 1000px;
+  flex-basis: auto; /* default value */
+  flex-grow: 1;
+  margin-top: 50px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}

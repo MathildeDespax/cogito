@@ -1,0 +1,165 @@
+.wrapper-cards-title {
+  background-color: grey;
+  width: 100%;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border: 4px solid white;
+  box-shadow: 2px 2px 2px grey;
+}
+
+.wrapper-cards-btn > a {
+  text-decoration: none;
+  color: none;
+}
+
+.card-index {
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px grey;
+  margin: 25px;
+}
+
+.cards-index-actions {
+  display: flex;
+}
+
+.add-question-form {
+  width: 60%;
+  margin: 12px;
+  padding: 10px;
+  border: 4px solid white;
+  box-shadow: 2px 2px 2px grey;
+  background-color: rgb(155, 232, 97);
+  color: white;
+  font-style: bold;
+}
+
+.share-history {
+  width: 42%;
+  margin: 12px;
+  padding: 10px;
+  border: 4px solid white;
+  box-shadow: 2px 2px 2px grey;
+  background-color:rgb(42, 143, 170);
+  color: white;
+  font-style: bold;
+
+}
+
+.share-history > p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+// ----------------------------//
+
+// Quizz show body
+
+.body-edition {
+  background-color: rgb(244, 244, 244);
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+
+// Quizz edition
+
+.quizz-edition {
+  width: 30%;
+
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+
+}
+
+
+.quizz-picture {
+  width: 60%;
+  margin: auto;
+  height: 250px;
+  border: 4px solid white;
+  box-shadow: 2px 2px 2px grey;
+  background-color: rgb(244, 244, 244);
+}
+
+.quizz-edition-titles {
+  border: 1px solid black;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+
+}
+
+.quizz-edition-shares {
+  border: 1px solid black;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+}
+.quizz-edition-btns {
+  border: 1px solid black;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.quizz-edition-btns > span {
+  margin: 5px
+}
+
+
+// Cards edition
+
+.cards-edition {
+  width: 70%;
+
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px 40px 20px 10px;
+  position: relative;
+  overflow-y: scroll;
+
+}
+
+
+.saved-card {
+  width: 95%;
+  height: 140px;
+  margin: 10px 40px 10px 10px;
+
+  border-radius: 10px;
+}
+
+.saved-card-front {
+  height: 50%;
+  width: 100%;
+  border: 1px solid black;
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px 10px 0px 0px;
+
+}
+
+.saved-card-back {
+  height: 50%;
+  width: 100%;
+  border: 1px solid black;
+  background-color: rgb(244, 244, 244);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.quizz-show {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
