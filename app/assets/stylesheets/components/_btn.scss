@@ -1,0 +1,18 @@
+.btn-index {
+  background-color: #F2EA57 ;
+  width: 150px;
+  padding: 10px;
+  margin: auto;
+  font-size: 20px;
+  border-radius: 100px;
+  margin-top: 50px;
+  border: 2px solid white;
+  &:hover {
+    background-color: #F2E600;
+  }
+}
+
+.btn-index > a {
+    text-decoration: none;
+    color: white;
+}
