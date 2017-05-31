@@ -1,5 +1,9 @@
 class CardsController < ApplicationController
+
+  before_filter :disable_nav, only: [:new, :edit]
   def new
+
+    @quizz = Quizz.find(params[:quizz_id])
     @card = Card.new
   end
 
@@ -34,4 +38,11 @@ class CardsController < ApplicationController
   def card_params
     params.require(:card).permit(:question, :answer)
   end
+
+    private
+
+  def disable_nav
+    @disable_nav = true
+  end
+
 end

@@ -8,8 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
-    <%= cloudinary_js_config %>
-
   </head>
   <body class="<%= yield(:body_class) %>">
     <%= render 'shared/navbar' unless @disable_nav %>
@@ -18,5 +16,6 @@
     <%= yield %>
     <%= render 'shared/footer' unless @disable_nav %>
     <%= javascript_include_tag 'application' %>
+    <%= cloudinary_js_config %>
   </body>
 </html>
