@@ -1,8 +1,8 @@
 <h1 class="text-center">My Quizzes</h1>
 
 <div class="action text-center">
-  <button type="button" class="btn-index"><%= link_to "Create", new_quizz_path, method: :get %></button>
-  <button type="button" class="btn-index"><%= link_to "Share", new_share_path, method: :get %></button>
+<a data-toggle="modal" class="btn-index" href="<%= new_quizz_path %>" data-target="#createQuizzModal"> Add a new Quizz</a>
+  <a data-toggle="modal" class="btn-index" href="<%= new_share_path %>" data-target="#shareQuizzModal"> Share a Quizz</a>
   <button type="button" class="btn-index"><%= link_to "Results", classrooms_path, method: :get %></button>
 </div>
 
@@ -34,3 +34,18 @@
 </div>
 
 
+<!-- Modal -->
+<div class="modal fade" id="createQuizzModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<!-- <!-- Modal2 -->
+<div class="modal fade" id="shareQuizzModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
