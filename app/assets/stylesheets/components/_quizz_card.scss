@@ -7,8 +7,8 @@
   border: 10px solid white;
   color: white;
   margin-bottom: 10px;
-
 }
+
 .shadow-z-1 {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12),0 1px 6px 0 rgba(0, 0, 0, 0.12);
   z-index: 1;
@@ -44,7 +44,6 @@
 .fa-plus-square {
   font-size: 100px;
   color: grey;
-  margin-bottom : 20px;
 }
 
 .quizz_card_category{
@@ -66,7 +65,19 @@
   top: 30%;
   font-size: 30px;
   color: black;
+  background-color: yellow;
 }
+
+#addquizz {
+  background-color: #F2EA57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #808080;
+  &:hover {
+    background-color: #F2E600;
+}}
 
 .action{
   margin-top: 20px;
