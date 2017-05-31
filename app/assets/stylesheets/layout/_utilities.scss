@@ -24,12 +24,6 @@
   background: #3b5998;
 }
 
-.super-wrapper {
-  min-height: calc(100vh - 120px);
-  text-align: center;
-  padding-top: 80px;
-}
-
 .super-wrapper h1 {
   margin: 0px;
 }
@@ -45,4 +39,10 @@
   display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 80px;
 }
