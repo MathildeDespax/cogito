@@ -33,10 +33,10 @@ class Classroom < ApplicationRecord
       self.barchart(card).each do |k, v|
         if v != 0
         j = rating.index(k)
-        cards[j][:data] << ["question #{i+1}", v]
+        cards[j][:data] << ["#{i+1}", v]
         else
         j = rating.index(k)
-        cards[j][:data] << ["question #{i+1}", 0]
+        cards[j][:data] << ["#{i+1}", 0]
         end
       end
     end
@@ -47,9 +47,9 @@ class Classroom < ApplicationRecord
     cards = [{ name: "good", data: []}, { name: "soso", data: []}, { name: "bad", data: []}]
     rating = ["good", "soso", "bad"]
     quizz.cards.each_with_index do |card, i|
-      cards[0][:data] << ["question #{i+1}", 0]
-      cards[1][:data] << ["question #{i+1}", 0]
-      cards[2][:data] << ["question #{i+1}", 0]
+      cards[0][:data] << ["#{i+1}", 0]
+      cards[1][:data] << ["#{i+1}", 0]
+      cards[2][:data] << ["#{i+1}", 0]
       self.barchart(card).each do |k, v|
         j = rating.index(k)
         cards[j][:data][i][1] = v
