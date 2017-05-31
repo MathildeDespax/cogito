@@ -2,6 +2,7 @@
     <%= f.input :name %>
     <%= f.input :subject %>
     <%= f.submit "Save", class: "btn btn-success" %>
+    <%= link_to "Back to my quizzes", quizzs_path, method: :get, class: "btn btn-danger"%>
   <% end %>
 
 
