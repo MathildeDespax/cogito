@@ -9,6 +9,19 @@
   margin-bottom: 10px;
 }
 
+.quizz_card > a {
+  text-decoration: none;
+  color: #33658A;
+  text-decoration: none;
+}
+
+.quizz_card > a > i {
+  text-decoration: none;
+  color: white;
+  font-size: 70px;
+
+}
+
 .shadow-z-1 {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12),0 1px 6px 0 rgba(0, 0, 0, 0.12);
   z-index: 1;
