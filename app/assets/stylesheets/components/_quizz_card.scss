@@ -13,7 +13,7 @@
 .quizz_card > a {
   text-decoration: none;
   color: #33658A;
-  text-decoration: none;
+
 }
 
 .quizz_card > a > i {
@@ -36,10 +36,20 @@
   position: absolute;
   bottom: 0;
   color: black;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+.shortcuts{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 22px;
 }
 
 .quizz_card_name {
   font-weight: bolder;
+  font-size: 20px;
 }
 
 .quizz_card_plus_name{
@@ -52,25 +62,24 @@
 }
 .fa-trash-o{
  color: #33658A;
- padding-left: 4px;
- bottom: 0;
- left: 0;
+ padding-left: 6px;
 }
 
 .fa-pencil{
   color: #33658A;
-  padding-left: 4px;
+  padding-left: 6px;
 }
 
-.fa-eye{
+.fa-share-alt{
   color: #33658A;
-  padding-left: 4px;
+  padding-left: 6px;
 }
 
 .fa-plus-square {
   font-size: 100px;
   color: grey;
 }
+
 
 #addquizz {
   background-color: #F2EA57;
@@ -82,6 +91,7 @@
   &:hover {
     background-color: #F2E600;
 }}
+
 
 .action{
   margin-top: 20px;
