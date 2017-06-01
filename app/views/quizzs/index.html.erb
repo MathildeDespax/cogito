@@ -12,13 +12,13 @@
               <div class="quizz_card_name"><%= quizz.name %></div>
               <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
               <div class="shortcuts">
-                <%= link_to new_share_path do %>
+                <%= link_to new_quizz_share_path(quizz), data: {target: "#shareQuizzModal", toggle: "modal"} do %>
                  <i class="fa fa-share-alt" aria-hidden="true"></i>
                 <% end %>
                 <%= link_to edit_quizz_path(quizz) do %>
                   <i class="fa fa-pencil"></i>
                 <% end %>
-                <%= link_to quizz_path(quizz), method: :delete do %>
+                <%= link_to quizz_path(quizz), method: :delete, :data => {:confirm => 'Are you sure?'} do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %>
               </div>
