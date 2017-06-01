@@ -18,8 +18,8 @@
               <div class="quizz_card_name"><%= quizz.name %></div>
               <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
               <div class="shortcuts">
-                <%= link_to quizz_path(quizz) do %>
-                  <i class="fa fa-eye" aria-hidden="true"></i>
+                <%= link_to new_share_path do %>
+                 <i class="fa fa-share-alt" aria-hidden="true"></i>
                 <% end %>
                 <%= link_to edit_quizz_path(quizz) do %>
                   <i class="fa fa-pencil"></i>
@@ -30,11 +30,11 @@
               </div>
             </div>
           </div>
-      </div>
+        </div>
     </div>
   <% end %>
     <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-      <div id="addquizz", class="quizz_card shadow-z-1">
+      <div id="addquizz", class="quizz_card shadow-z-1" style="background-color: #F2EA57">
        <a data-toggle="modal" class="text-center" href="<%= new_quizz_path %>" data-target="#createQuizzModal">
         <i class="fa fa-plus-square-o" aria-hidden="true"></i>
         <h3>Add a Quizz</h3></a>
@@ -61,3 +61,5 @@
     </div>
   </div>
 </div>
+
+
