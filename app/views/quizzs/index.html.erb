@@ -2,17 +2,12 @@
   <h1>My quizzes</h1>
 </div>
 
-<div class="action text-center">
-  <a data-toggle="modal" class="btn-index" href="<%= new_quizz_path %>" data-target="#createQuizzModal"> Add a new Quizz</a>
-  <button type="button" class="btn-index"><%= link_to "Results", classrooms_path, method: :get %></button>
-</div>
-
-<div class="container">
-  <div class="row">
-    <% @quizzs.each do |quizz| %>
-      <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-        <div class="image-card-quizz">
-          <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('<%= cl_image_path quizz_photo_url(quizz), height: 260, width: 300, crop: :fill %>')">
+<div class="my-quizzes">
+  <div class="container">
+    <div class="row">
+      <% @quizzs.each do |quizz| %>
+        <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+          <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path quizz_photo_url(quizz), height: 260, width: 300, crop: :fill %>')">
             <div class="details">
               <div class="quizz_card_name"><%= quizz.name %></div>
               <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
@@ -28,22 +23,23 @@
                 <% end %>
               </div>
             </div>
+            <%= link_to "", quizz_path(quizz), class: "card-link" %>
           </div>
         </div>
-    </div>
-  <% end %>
-    <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-      <div id="addquizz", class="quizz_card shadow-z-1" style="background-color: #F2EA57">
-       <a data-toggle="modal" class="text-center" href="<%= new_quizz_path %>" data-target="#createQuizzModal">
-        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-        <h3>Add a Quizz</h3></a>
+      <% end %>
+
+      <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+        <div class="quizz_card shadow-z-1">
+          <div class="add_a_quizz">
+            <a data-toggle="modal" class="text-center" href="<%= new_quizz_path %>" data-target="#createQuizzModal" >
+            <i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+          </div>
+          <div class="details quizz_card_name"> Add a Quizz</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="createQuizzModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -60,5 +56,3 @@
     </div>
   </div>
 </div>
-
-

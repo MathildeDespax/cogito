@@ -6,8 +6,10 @@
     <div class="quizz-picture" style="background-image: url('<%= cl_image_path quizz_photo_url(@quizz), height: 300, width: 400, crop: :fill %>')">
     </div>
     <div class="quizz-edition-titles">
-      <h4><%= @quizz.name %></h4>
-      <h6><%= @quizz.subject %></h6>
+      <h3><%= @quizz.name %></h3>
+      <h5><%= @quizz.subject %></h5>
+      <h6 class="card-total"><%=@quizz.cards.count %> cards</h6>
+
     </div>
     <div class="quizz-edition-btns">
 
@@ -34,20 +36,20 @@
   <!-- <div class="avatar-card" style="background-image: url(<%= asset_path('add-card') %>);"></div> -->
 
   <% @quizz.cards.each_with_index do |card, i| %>
-    <div class="saved-card">
-    <div class="card-position"><span><%= i + 1 %></span></div>
+    <div class="saved-card text-center">
+    <div class="card-position"><span class="cards-count"><%= i + 1 %>/<%=@quizz.cards.count %></span></div>
       <div class="saved-card-front">
-         <p><span>FRONT  </span><strong><%= card.question %></strong></p>
+         <p class="text-align"><strong><%= card.question %></strong></p>
 
       </div>
-      <div class="saved-card-back">
-        <p><span>BACK </span><%= card.answer %></p>
+      <div class="saved-card-back text-align">
+        <p><%= card.answer %></p>
       </div>
-          <div class="details">
+          <div class="details-cards">
 
-          <a data-toggle="modal" href="<%= edit_card_path(card) %>" data-target="#myModal"> <i class="fa fa-pencil"></i></a>
+          <a data-toggle="modal" href="<%= edit_card_path(card) %>" data-target="#myModal"> <i class="fa fa-pencil icons-cards"></i></a>
           <%= link_to card_path(card), method: :delete do %>
-            <i class="fa fa-trash-o"></i>
+            <i class="fa fa-trash-o icons-cards"></i>
           <% end %>
     </div>
     </div>
