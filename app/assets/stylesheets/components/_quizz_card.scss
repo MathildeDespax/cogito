@@ -13,13 +13,21 @@
 .quizz_card > a {
   text-decoration: none;
   color: #33658A;
-
 }
 
 .quizz_card > a > i {
   text-decoration: none;
   color: white;
   font-size: 70px;
+}
+
+.add_a_quizz {
+  display: flex;
+  height: 240px;
+  background-color: #F2EA57;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
 }
 
 .shadow-z-1 {
@@ -39,6 +47,13 @@
   width: 100%;
   display:flex;
   flex-direction: column;
+  background-color: white;
+  padding-top: 10px;
+
+  .details > h3 {
+    font-size: 20px;
+
+  }
 }
 .shortcuts{
   position: absolute;
@@ -52,14 +67,6 @@
   font-size: 20px;
 }
 
-.quizz_card_plus_name{
-  position: absolute;
-  width: 100%;
-  top: 30%;
-  font-size: 30px;
-  color: black;
-  background-color: yellow;
-}
 .fa-trash-o{
  color: #33658A;
  padding-left: 6px;
@@ -74,24 +81,6 @@
   color: #33658A;
   padding-left: 6px;
 }
-
-.fa-plus-square {
-  font-size: 100px;
-  color: grey;
-}
-
-
-#addquizz {
-  background-color: #F2EA57;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #808080;
-  &:hover {
-    background-color: #F2E600;
-}}
-
 
 .action{
   margin-top: 20px;
