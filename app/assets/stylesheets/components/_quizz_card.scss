@@ -36,6 +36,14 @@
   position: absolute;
   bottom: 0;
   color: black;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+.shortcuts{
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .quizz_card_category {

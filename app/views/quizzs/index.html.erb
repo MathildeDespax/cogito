@@ -17,15 +17,17 @@
             <div class="details">
               <div class="quizz_card_name"><%= quizz.name %></div>
               <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
-              <%= link_to quizz_path(quizz) do %>
-                <i class="fa fa-eye" aria-hidden="true"></i>
-              <% end %>
-              <%= link_to edit_quizz_path(quizz) do %>
-                <i class="fa fa-pencil"></i>
-              <% end %>
-              <%= link_to quizz_path(quizz), method: :delete do %>
-                <i class="fa fa-trash-o"></i>
-              <% end %>
+              <div class="shortcuts">
+                <%= link_to quizz_path(quizz) do %>
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+                <% end %>
+                <%= link_to edit_quizz_path(quizz) do %>
+                  <i class="fa fa-pencil"></i>
+                <% end %>
+                <%= link_to quizz_path(quizz), method: :delete do %>
+                  <i class="fa fa-trash-o"></i>
+                <% end %>
+              </div>
             </div>
           </div>
       </div>
