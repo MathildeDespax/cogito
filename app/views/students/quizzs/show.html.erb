@@ -4,7 +4,7 @@
   <h2><%= @quizz.name %></h2>
 </div>
 
-<div class="container card-container">
+<div class="card-container">
   <% @quizz.cards.each do |card| %>
     <div class="card col-xs-12">
       <div class="card__front">
@@ -15,17 +15,17 @@
         <div class="card-evaluation">
         <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
           <%= f.input :evaluation, as: :hidden, input_html: { value: :bad } %>
-          <%= f.submit 'Did not know', class: "btn btn-danger"  %>
+          <%= f.submit 'Did not know', class: "btn-students-red"  %>
         <% end %>
 
         <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
           <%= f.input :evaluation, as: :hidden, input_html: { value: :soso } %>
-          <%= f.submit 'Shaky', class: "btn btn-warning"  %>
+          <%= f.submit 'Shaky', class: "btn-students-yel"  %>
         <% end %>
 
         <%= simple_form_for [card, @student_evaluation], remote: true do |f| %>
           <%= f.input :evaluation, as: :hidden, input_html: { value: :good } %>
-          <%= f.submit 'Easy breezy!', class: "btn btn-success" %>
+          <%= f.submit 'Easy breezy!', class: "btn-students-green" %>
         <% end %>
       </div>
     </div>
