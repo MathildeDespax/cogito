@@ -7,7 +7,11 @@
     <div class="row">
       <% @quizzs.each do |quizz| %>
         <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-          <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path quizz_photo_url(quizz), height: 260, width: 300, crop: :fill %>')">
+          <div class="quizz_card shadow-z-1">
+            <%= link_to quizz_path(quizz) do%>
+              <div class="quizz_card_image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path quizz_photo_url(quizz), height: 260, width: 300, crop: :fill %>')">
+              </div>
+            <%end%>
             <div class="details">
               <div class="quizz_card_name"><%= quizz.name %></div>
               <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
@@ -15,26 +19,22 @@
                 <%= link_to new_quizz_share_path(quizz), data: {target: "#shareQuizzModal", toggle: "modal"} do %>
                  <i class="fa fa-share-alt" aria-hidden="true"></i>
                 <% end %>
-                <%= link_to edit_quizz_path(quizz) do %>
-                  <i class="fa fa-pencil"></i>
-                <% end %>
+                <a data-toggle="modal" href="<%= edit_quizz_path(quizz) %>" data-target="#editQuizzModal"> <i class="fa fa-pencil icons-cards"></i></a>
                 <%= link_to quizz_path(quizz), method: :delete, :data => {:confirm => 'Are you sure?'} do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %>
               </div>
             </div>
-            <%= link_to "", quizz_path(quizz), class: "card-link" %>
           </div>
         </div>
-      <% end %>
-
+      <%end%>
       <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
         <div class="quizz_card shadow-z-1">
           <div class="add_a_quizz">
             <a data-toggle="modal" class="text-center" href="<%= new_quizz_path %>" data-target="#createQuizzModal" >
             <i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
           </div>
-          <div class="details quizz_card_name"> Add a Quizz</div>
+          <div class="details quizz_card_name">Add a quizz</div>
         </div>
       </div>
     </div>
@@ -51,6 +51,13 @@
 
 <!-- <!-- Modal2 -->
 <div class="modal fade" id="shareQuizzModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editQuizzModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
     </div>
