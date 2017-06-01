@@ -1,8 +1,13 @@
-<div class="container">
+<div class="intro" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url(<%= image_path("pupils.jpg")%>);">
   <h1><%= @classroom.name %></h1>
-    <%= link_to "Back to classrooms", classrooms_path, class: "btn btn-danger"  %>
-  <div class="content">
-    <div class="form">
+</div>
+
+<div class="action text-center">
+  <button type="button" class="btn-index"><%= link_to "Back to classrooms", classrooms_path, method: :get %></button>
+</div>
+
+<div class="container">
+  <div class="row">
       <% @quizzs.each do |quizz| %>
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
@@ -20,11 +25,11 @@
               <div class="panel-body">
                 <div class="col-xs-12 col-md-6">
                   <h3>Quizz results</h3>
-                  <%= pie_chart @classroom.piechart(quizz), width: "100%" %>
+                  <%= pie_chart @classroom.piechart(quizz), width: "100%", refresh: 60 %>
                 </div>
                 <div class="col-xs-12 col-md-6">
                   <h3>Cards results</h3>
-                  <%= bar_chart @classroom.chart_stat(quizz), stacked: true, width: "100%" %>
+                  <%= bar_chart @classroom.chart_stat(quizz), stacked: true, width: "100%", refresh: 60 %>
                 </div>
               </div>
             </div>

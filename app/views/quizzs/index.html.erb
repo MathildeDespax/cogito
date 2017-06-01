@@ -1,4 +1,4 @@
-<div class="intro" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url(<%= image_path("quizzes.jpeg")%>);">
+<div class="intro" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%), url(<%= image_path("quizzes.jpg")%>);">
   <h1>My quizzes</h1>
 </div>
 
@@ -8,41 +8,39 @@
   <button type="button" class="btn-index"><%= link_to "Results", classrooms_path, method: :get %></button>
 </div>
 
-
-
 <div class="container">
   <div class="row">
     <% @quizzs.each do |quizz| %>
       <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-        <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('<%= cl_image_path quizz_photo_url(quizz), height: 300, width: 400, crop: :fill %>')">
-          <div class="quizz_card_category"><%= quizz.subject.upcase  %></div>
-          <div class="quizz_card_name text-center"><%= quizz.name  %></div>
-
-          <div class="details">
-            <%= link_to quizz_path(quizz) do %>
-              <i class="fa fa-eye" aria-hidden="true"></i>
-            <% end %>
-            <%= link_to edit_quizz_path(quizz) do %>
-              <i class="fa fa-pencil"></i>
-            <% end %>
-            <%= link_to quizz_path(quizz), method: :delete do %>
-              <i class="fa fa-trash-o"></i>
-            <% end %>
+        <div class="image-card-quizz">
+          <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('<%= cl_image_path quizz_photo_url(quizz), height: 260, width: 300, crop: :fill %>')">
+            <div class="details">
+              <div class="quizz_card_name"><%= quizz.name %></div>
+              <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
+              <%= link_to quizz_path(quizz) do %>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to edit_quizz_path(quizz) do %>
+                <i class="fa fa-pencil"></i>
+              <% end %>
+              <%= link_to quizz_path(quizz), method: :delete do %>
+                <i class="fa fa-trash-o"></i>
+              <% end %>
+            </div>
           </div>
-        </div>
       </div>
+    </div>
   <% end %>
     <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-      <%= link_to quizzs_path  do %>
-        <div id="addquizz", class="quizz_card shadow-z-1">
-          <i class="fa fa-plus-square" aria-hidden="true"></i>
-          <h3>Add a Quizz</h3>
-        </div>
+      <div id="addquizz", class="quizz_card shadow-z-1">
+       <a data-toggle="modal" class="text-center" href="<%= new_quizz_path %>" data-target="#createQuizzModal">
+        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+        <h3>Add a Quizz</h3></a>
       </div>
-    <%end%>
+    </div>
   </div>
 </div>
-</div>
+
 
 
 
