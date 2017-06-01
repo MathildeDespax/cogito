@@ -1,12 +1,13 @@
 .quizz_card {
   background-color: #fff;
-  background-size: cover;
-  position: relative;
-  height: 260px;
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  height: 340px;
   transition: padding 0.25s ease-out, width 0.25s linear;
   border: 10px solid white;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .quizz_card > a {
@@ -19,7 +20,6 @@
   text-decoration: none;
   color: white;
   font-size: 70px;
-
 }
 
 .shadow-z-1 {
@@ -32,44 +32,17 @@
 }
 
 .details {
+  height: 80px;
   position: absolute;
-  bottom: 0px;
-  right: 10px;
-  font-size: 20px;
-  padding-bottom: 4px;
+  bottom: 0;
+  color: black;
 }
 
-.fa-trash-o{
- color: white;
- padding-left: 4px;
+.quizz_card_category {
 }
 
-.fa-pencil{
-  color: white;
-  padding-left: 4px;
-}
-
-.fa-eye{
-  color: white;
-  padding-left: 4px;
-}
-
-.fa-plus-square {
-  font-size: 100px;
-  color: grey;
-}
-
-.quizz_card_category{
-  position: absolute;
-  padding-top: 3px;
-  padding-left: 5px;
-}
-
-.quizz_card_name{
-  position: absolute;
-  width: 100%;
-  top: 30%;
-  font-size: 30px;
+.quizz_card_name {
+  font-weight: bolder;
 }
 
 .quizz_card_plus_name{
@@ -80,6 +53,29 @@
   color: black;
   background-color: yellow;
 }
+.fa-trash-o{
+ color: #33658A;
+ padding-left: 4px;
+ bottom: 0;
+ left: 0;
+}
+
+.fa-pencil{
+  color: #33658A;
+  padding-left: 4px;
+}
+
+.fa-eye{
+  color: #33658A;
+  padding-left: 4px;
+}
+
+.fa-plus-square {
+  font-size: 100px;
+  color: grey;
+}
+
+
 
 #addquizz {
   background-color: #F2EA57;
