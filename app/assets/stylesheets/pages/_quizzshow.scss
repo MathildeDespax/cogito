@@ -95,21 +95,19 @@
   margin: 10px;
   margin-left: 50px;
   text-align: left;
+  color: #808080;
 }
 
 .quizz-edition-titles > h5 {
   font-style: italic;
+  color: #808080;
 
 }
 
-.card-total {
-  color: rgb(51, 101, 138);
 
-
-}
 
 .card-total {
-
+  color: #808080;
 }
 
 .quizz-edition-shares {
@@ -126,14 +124,25 @@
   margin: 10px;
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   margin-left: 50px;
-  text-align: left;
+  text-align: center;
+}
+
+.quizz-edition-btns > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .quizz-edition-btns > span {
-  margin: 5px
+  text-decoration: none;
+  color: white;
+}
+
+.quizz-edition-btns > span {
+  margin: 5px;
 }
 
 
@@ -156,8 +165,7 @@
   padding: 10px;
   border-radius: 10px;
   position: relative;
-  box-shadow: 1px 1px 1px grey;
-  border: 1px solid rgb(51, 101, 138);
+  border: 2px solid rgb(51, 101, 138);
   color: rgb(51, 101, 138);
   background-color: white;
   display:flex;
@@ -179,8 +187,7 @@
 .cards-count {
   position: absolute;
   top: 30px;
-  font-style: italic;
-  color: rgb(51, 101, 138);
+  color: #808080;
   font-size: 13px;
 
 }
@@ -189,11 +196,11 @@
   position: absolute;
   bottom: 15px;
   right: 15px;
-  color: rgb(51, 101, 138);
+  color: #808080;
 }
 
 .icons-cards {
-  color: rgb(51, 101, 138);
+  color: #808080;
 }
 // .saved-card-front {
 //   height: 50%;
