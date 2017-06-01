@@ -23,7 +23,7 @@
 
 .add_a_quizz {
   display: flex;
-  height: 240px;
+  height: 225px;
   background-color: #F2EA57;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,6 @@
 
   .details > h3 {
     font-size: 20px;
-
   }
 }
 .shortcuts{
@@ -81,8 +80,6 @@
   color: #33658A;
   padding-left: 6px;
 }
-
-.action{
-  margin-top: 20px;
-  margin-bottom: 20px;
+.my-quizzes{
+  margin-top: 80px;
 }
