@@ -23,7 +23,7 @@
                 <%= link_to edit_quizz_path(quizz) do %>
                   <i class="fa fa-pencil"></i>
                 <% end %>
-                <%= link_to quizz_path(quizz), method: :delete do %>
+                <%= link_to quizz_path(quizz), method: :delete, :data => {:confirm => 'Are you sure?'} do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %>
               </div>
