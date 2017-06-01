@@ -77,17 +77,17 @@
   justify-content: space-between;
   overflow-y: auto;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
-
 }
 
 
 .quizz-picture {
-  width: 96%;
+  width: 94%;
   margin: auto;
   height: 250px;
-  box-shadow: 2px 2px 2px grey;
+  box-shadow: 1px 1px 1px grey;
   background-color: rgb(244, 244, 244);
-  border-radius: 5px;
+  border-radius: 2px;
+
 }
 
 .quizz-edition-titles {
@@ -95,7 +95,20 @@
   margin: 10px;
   margin-left: 50px;
   text-align: left;
+}
 
+.quizz-edition-titles > h5 {
+  font-style: italic;
+
+}
+
+.card-total {
+  color: rgb(51, 101, 138);
+
+
+}
+
+.card-total {
 
 }
 
@@ -128,34 +141,34 @@
 
 .cards-edition {
   width: 70%;
-
   background-color: white;
   border-radius: 5px;
   margin: 20px 40px 20px 10px;
   position: relative;
   overflow-y: scroll;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
-
 }
-
 
 .saved-card {
   width: 95%;
   height: 140px;
-  margin: 10px 40px 10px 10px;
-  padding-left: 40px;
-  border-radius: 20px;
-  // border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
   position: relative;
-  box-shadow: 2px 2px 2px grey;
-  background-color: rgb(157, 159, 160);
-
-
+  box-shadow: 1px 1px 1px grey;
+  border: 1px solid rgb(51, 101, 138);
+  color: rgb(51, 101, 138);
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.saved-card > span{
-  color: rgb(235, 235, 235);
-}
+// .saved-card > span{
+//   color: rgb(235, 235, 235);
+// }
 
 .card-position {
   position: absolute;
@@ -163,30 +176,49 @@
   top: 57px;
 }
 
-.saved-card-front {
-  height: 50%;
-  width: 100%;
-  // border: 1px solid black;
-  background-color: rgb(235, 235, 235);
-  border-radius: 20px 20px 0px 0px;
-  text-align: center;
-  padding-top: 5px;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
+.cards-count {
+  position: absolute;
+  top: 30px;
+  font-style: italic;
+  color: rgb(51, 101, 138);
+  font-size: 13px;
 
 }
 
-.saved-card-back {
-  height: 50%;
-  width: 100%;
-  // border: 1px solid black;
-  background-color: rgb(214, 209, 209);
-  border-radius: 0px 0px 10px 10px;
-  text-align: center;
-  padding-top: 5px;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
+.details-cards {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: rgb(51, 101, 138);
 }
+
+.icons-cards {
+  color: rgb(51, 101, 138);
+}
+// .saved-card-front {
+//   height: 50%;
+//   width: 100%;
+//   // border: 1px solid black;
+//   background-color: rgb(235, 235, 235);
+//   border-radius: 20px 20px 0px 0px;
+//   text-align: center;
+//   padding-top: 5px;
+//   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
+
+// }
+
+// .saved-card-back {
+//   height: 50%;
+//   width: 100%;
+//   // border: 1px solid black;
+//   background-color: rgb(214, 209, 209);
+//   border-radius: 0px 0px 10px 10px;
+//   text-align: center;
+//   padding-top: 5px;
+//   color: white;
+//   font-weight: bold;
+//   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
+// }
 
 .quizz-show {
   display: flex;

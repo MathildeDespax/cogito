@@ -2,12 +2,8 @@
   <h1>My quizzes</h1>
 </div>
 
-<div class="action text-center">
-  <a data-toggle="modal" class="btn-index" href="<%= new_quizz_path %>" data-target="#createQuizzModal"> Add a new Quizz</a>
-  <button type="button" class="btn-index"><%= link_to "Results", classrooms_path, method: :get %></button>
-</div>
-
-<div class="container">
+<div class="my-quizzes">
+  <div class="container">
   <div class="row">
     <% @quizzs.each do |quizz| %>
       <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
@@ -26,22 +22,24 @@
                 <%= link_to quizz_path(quizz), method: :delete do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %>
+                </div>
               </div>
             </div>
-          </div>
         </div>
-    </div>
-  <% end %>
-    <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-      <div id="addquizz", class="quizz_card shadow-z-1" style="background-color: #F2EA57">
-       <a data-toggle="modal" class="text-center" href="<%= new_quizz_path %>" data-target="#createQuizzModal">
-        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-        <h3>Add a Quizz</h3></a>
+      </div>
+    <% end %>
+      <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+        <div class="quizz_card shadow-z-1">
+          <div class="add_a_quizz">
+            <a data-toggle="modal" class="text-center" href="<%= new_quizz_path %>" data-target="#createQuizzModal" >
+            <i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+          </div>
+          <div class="details quizz_card_name"> Add a Quizz</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
 
 
@@ -60,5 +58,3 @@
     </div>
   </div>
 </div>
-
-
