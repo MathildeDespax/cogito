@@ -39,12 +39,12 @@ teacher6 = User.create!(first_name: "Bobby", last_name: "Lapointe", email: "boby
 students << student1 = User.create!(first_name: "Mathilde", last_name: "Despax", email: "gdebargue@gmail.com", password:"cogito1234")
 students << student2 = User.create!(first_name: "Bastien", last_name: "Pinot", email: "gdebargue@gmail.com", password:"cogito1234")
 students << student3 = User.create!(first_name: "Gregory", last_name: "Debargue", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student4 = User.create!(first_name: "Josette", last_name: "Dupont", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student5 = User.create!(first_name: "Therese", last_name: "Martin", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student6 = User.create!(first_name: "Julie", last_name: "Lapine", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student7 = User.create!(first_name: "Fanny", last_name: "Robinet", email: "fgdebargue@gmail.com", password:"cogito1234")
-students << student8 = User.create!(first_name: "John", last_name: "Etti", email: "gdebargue@gmail.com", password:"cogito1234")
-students << student9 = User.create!(first_name: "Steevy", last_name: "Jacket", email: "gdebargue@gmail.com", password:"cogito1234")
+students << student4 = User.create!(first_name: "Josette", last_name: "Dupont", email: "Josette@cogito.com", password:"cogito1234")
+students << student5 = User.create!(first_name: "Therese", last_name: "Martin", email: "therese@cogito.com", password:"cogito1234")
+students << student6 = User.create!(first_name: "Julie", last_name: "Lapine", email: "julie@cogito.com", password:"cogito1234")
+students << student7 = User.create!(first_name: "Fanny", last_name: "Robinet", email: "fanny@cogito.com", password:"cogito1234")
+students << student8 = User.create!(first_name: "John", last_name: "Etti", email: "john@cogito.com", password:"cogito1234")
+students << student9 = User.create!(first_name: "Steevy", last_name: "Jacket", email: "steeve@cogito.com", password:"cogito1234")
 puts 'done'
 
 print 'Seeding quizzs'.ljust(LJUST_MAX, '.')
