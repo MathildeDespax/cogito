@@ -47,9 +47,6 @@
   font-size: 22px;
 }
 
-.quizz_card_category {
-}
-
 .quizz_card_name {
   font-weight: bolder;
   font-size: 20px;
@@ -84,9 +81,19 @@
 }
 
 
+#addquizz {
+  background-color: #F2EA57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #808080;
+  &:hover {
+    background-color: #F2E600;
+}}
+
 
 .action{
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
