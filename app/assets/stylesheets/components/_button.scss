@@ -1,17 +1,20 @@
 .btn-medium {
-    color: #33658A;
+    color: white;
     border: 2px solid white;
     border-radius: 50px;
     font-weight: lighter;
     opacity: 1;
     width: 170px;
-    background-color: #F2EA57;
+    background-color: #FFD400;
     font-weight: bolder;
+    font-family: $home-font;
 }
+
 .btn-medium:hover {
   text-decoration: none;
-  color: #999999;
-  border: 2px solid #33658A;
+  color: #FFD400;
+  border: 2px solid #FFD400;
+  background-color: white;
 }
 
 .btn-students-yel {
