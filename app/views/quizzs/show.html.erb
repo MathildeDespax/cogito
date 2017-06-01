@@ -20,11 +20,11 @@
 
     <div class="quizz-edition-shares">
       <h6>Shared to :</h6>
-      <span>
-           <% @quizz.shares.each do |share| %>
-           <%=share.classroom.name %>
-           <% end %>
-      </span>
+       <% @quizz.shares.each do |share| %>
+       <div>
+       <%=share.classroom.name %> on <%=share.created_at.strftime("%d %B %Y") %>
+       </div>
+       <% end %>
     </div>
   </div>
 
