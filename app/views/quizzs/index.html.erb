@@ -4,11 +4,11 @@
 
 <div class="my-quizzes">
   <div class="container">
-  <div class="row">
-    <% @quizzs.each do |quizz| %>
-      <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
-        <div class="image-card-quizz">
-          <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('<%= cl_image_path quizz_photo_url(quizz), height: 260, width: 300, crop: :fill %>')">
+
+    <div class="row">
+      <% @quizzs.each do |quizz| %>
+        <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
+          <div class="quizz_card shadow-z-1" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path quizz_photo_url(quizz), height: 260, width: 300, crop: :fill %>')">
             <div class="details">
               <div class="quizz_card_name"><%= quizz.name %></div>
               <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
@@ -22,12 +22,13 @@
                 <%= link_to quizz_path(quizz), method: :delete do %>
                   <i class="fa fa-trash-o"></i>
                 <% end %>
-                </div>
               </div>
             </div>
+            <%= link_to "", quizz_path(quizz), class: "card-link" %>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+
       <div class="col-xs-12 col-md-4 col-sm-6 col-lg-3">
         <div class="quizz_card shadow-z-1">
           <div class="add_a_quizz">
@@ -40,8 +41,6 @@
     </div>
   </div>
 </div>
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="createQuizzModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
