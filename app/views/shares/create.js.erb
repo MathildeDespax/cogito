@@ -1,0 +1,5 @@
+<% if @share.errors.any? %>
+  $('#new-share-form').html('<%= j render "shares/form", quizz: @share.quizz, share: @share %>');
+<% else %>
+  $('#new-share').html('<%= j render "shares/success", success_message: "Successfully shared with #{@share.classroom.name}" %>');
+<% end %>

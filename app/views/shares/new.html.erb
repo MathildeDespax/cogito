@@ -1,4 +1,6 @@
-<div class="edition-forms text-center">
-<h3>Share a quizz</h3>
-  <%= render 'form' %>
+<div class="edition-forms text-center" id="new-share">
+  <h3>Share "<%=@quizz.name%>" to</h3>
+  <div id="new-share-form">
+    <%= render "shares/form", quizz: @quizz, share: @share %>
+  </div>
 </div>
