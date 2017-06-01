@@ -27,9 +27,6 @@
               <a data-toggle="modal" href="<%= new_quizz_path %>" data-target="#createQuizzModalNav"><i class="fa fa-plus"></i> <%= t("Create a quizz") %></a>
             </li>
             <li>
-            <a data-toggle="modal" href="<%= new_share_path %>" data-target="#shareQuizzModal"><i class="fa fa-share-alt"></i> <%= t("Share a quizz") %></a>
-            </li>
-            <li>
               <%= link_to classrooms_path do %>
                 <i class="fa fa-users"></i> <%= t("Classroom Analysis") %>
               <% end %>
@@ -50,20 +47,4 @@
     <% end %>
   </div>
 
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="createQuizzModalNav" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    </div>
-  </div>
-</div>
-
-<!-- <!-- Modal2 -->
-<div class="modal fade" id="shareQuizzModalNav" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    </div>
-  </div>
 </div>

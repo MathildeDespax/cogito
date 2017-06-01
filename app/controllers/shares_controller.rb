@@ -1,26 +1,37 @@
 class SharesController < ApplicationController
-  before_filter :disable_nav, only: [:new, :edit]
+  # before_action :disable_nav, only: [:new, :edit]
 
   def new
-    @quizzs = current_user.quizzs
     @classrooms = current_user.teaching_classrooms
     @share = Share.new
+    @quizz = Quizz.find(params[:quizz_id])
+    render layout: false
   end
 
   def create
-    @quizzs = current_user.quizzs
+    @quizz = Quizz.find(params[:quizz_id])
     @classrooms = current_user.teaching_classrooms
     @share = Share.new(share_params)
+    @share.quizz = @quizz
     if @share.save
-      flash[:alert] = "Already shared with this classroom" unless @share.valid?
       @share.classroom.students.each do |student|
         UserMailer.new_quizz(student, @share.quizz).deliver_now
       end
-
-      redirect_to quizzs_path
+      respond_to do |format|
+        format.html {
+          # redirect_to quizzs_path, notice: "Quizz shared with #{@share.classroom.name}"
+        }
+        format.js # render shares/create.js.erb
+      end
      else
-      flash[:alert] = "Already shared with this classroom"
-      render :new
+      respond_to do |format|
+        format.html {
+          flash[:alert] = "Already shared with this classroom"
+          render :new
+        }
+        format.js # render shares/create.js.erb
+      end
+
      end
   end
 

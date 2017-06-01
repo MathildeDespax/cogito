@@ -1,5 +1,5 @@
 class Quizz < ApplicationRecord
-  has_many :shares
+  has_many :shares, dependent: :destroy
   has_many :classrooms, through: :shares
 
   has_many :cards, -> { order(position: :asc) }, dependent: :destroy

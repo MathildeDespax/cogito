@@ -14,10 +14,12 @@
     <div class="quizz-edition-btns">
 
 
-         <a data-toggle="modal" href="<%= new_quizz_card_path(@quizz) %>" data-target="#myModal2"> Add a new card</a>
+         <a data-toggle="modal" class="btn btn-students-green" href="<%= new_quizz_card_path(@quizz) %>" data-target="#myModal2">
 
-      <span class="btn btn-primary"><%= link_to "Save", quizzs_path %></span>
-      <span class="btn btn-danger"><%= link_to "Delete", quizz_path(@quizz), method: :delete %></span>
+         Add a new card</a>
+
+      <span class="btn-students-yel"><%= link_to "Save", quizzs_path %></span>
+
 
     </div>
     <div class="quizz-edition-shares">
