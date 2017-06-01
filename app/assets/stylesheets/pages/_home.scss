@@ -19,14 +19,32 @@
   padding-bottom: 150px;
   font-family: $home-font;
   h1 {
+    text-shadow: 2px 2px 2px grey;
     font-family: $home-font;
-    font-size: 60px;
-  }
-    h3 {
-    font-family: $home-font;
-    font-size: 30px;
+    font-size: 80px;
   }
 }
+
+.btn-medium-home {
+  color: #33658A;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  width: 170px;
+  background-color: #F2EA57;
+  font-weight: bolder;
+
+  h5{
+    font-family: $home-font;
+  }
+}
+.btn-medium-home:hover {
+  text-decoration: none;
+  color: #999999;
+  border: 2px solid #33658A;
+}
+
 
 .wrapper {
   padding-top: 55px;
