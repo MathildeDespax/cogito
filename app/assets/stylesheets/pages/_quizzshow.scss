@@ -56,7 +56,7 @@
 // Quizz show body
 
 .body-edition {
-  padding: 50px;
+  padding: 20px;
   background-color: white;
   height: 90vh;
   display: flex;
@@ -68,8 +68,9 @@
 // Quizz edition
 
 .quizz-edition {
-  width: 30%;
   padding: 10px;
+  width: 30%;
+  margin: 10px;
   margin-right: 30px;
   background-color: white;
   border-radius: 5px;
@@ -83,23 +84,21 @@
 }
 
 .quizz-picture {
-  width: 94%;
-  margin: auto;
-  height: 250px;
-  box-shadow: 1px 1px 1px grey;
+  width: 100%;
+  height: 230px;
   background-color: rgb(244, 244, 244);
   border-radius: 2px;
 
 }
 
 .quizz-edition-titles {
-  margin: 10px;
-  color: #808080;
+  color: rgb(51, 101, 138);
+  margin-bottom: 10px;
 }
 
 .quizz-edition-titles > h5 {
   font-style: italic;
-  color: #808080;
+  color: rgb(51, 101, 138);
 }
 
 .card-total {
@@ -119,8 +118,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 50px;
   text-align: center;
+  margin: 10px 80px;
 }
 
 .quizz-edition-btns > a {
@@ -129,44 +128,37 @@
   font-weight: bold;
 }
 
-.quizz-edition-btns > span {
-  text-decoration: none;
-  color: white;
-}
-
-.quizz-edition-btns > span {
-  margin: 5px;
-}
-
-
 // Cards edition
 
 .cards-edition {
   width: 70%;
   background-color: white;
-  border-radius: 5px;
   position: relative;
   overflow-y: scroll;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
-  transition: padding 0.25s ease-out, width 0.25s linear;
-  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.6),0 1px 6px 0 rgba(0, 0, 0, 0.12);
-  z-index: 1;
+  padding-bottom: 10px
+
 }
 
 .saved-card {
   width: 95%;
   height: 140px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
   padding: 10px;
   border-radius: 10px;
   position: relative;
-  border: 2px solid rgb(51, 101, 138);
   color: rgb(51, 101, 138);
   background-color: white;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2) inset;
+  transition: padding 0.25s ease-out, width 0.25s linear;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.6),0 1px 6px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1;
 
 }
 
@@ -174,10 +166,20 @@
 //   color: rgb(235, 235, 235);
 // }
 
-.card-position {
+.card-number {
   position: absolute;
-  left: 17px;
-  top: 57px;
+  bottom: 10px;
+  left: 10px;
+  font-size: 15px;
+}
+
+.title-card-show {
+  font-family: $home-font;
+  font-size: 60px;
+  color: rgb(51, 101, 138);
+  font-weight: bolder;
+  margin: 30px;
+  text-shadow: 3px 3px 3px #828282;
 }
 
 .cards-count {

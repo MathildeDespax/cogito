@@ -1,12 +1,16 @@
 <% content_for(:body_class, "quizz-show") %>
 
+<div class="title-card-show text-center">
+  Create Cards!
+</div>
+
+
 
 <div class="body-edition">
-
   <div class="quizz-edition shadow-z-1">
     <div class="quizz-edition-titles">
+      <div><strong><%= @quizz.name %></strong></div>
       <div> <%= @quizz.subject %></div>
-      <div> <%= @quizz.name %></div>
       <div> Number of cards: <%= @quizz.cards.count %></div>
     </div>
 
@@ -14,17 +18,16 @@
     </div>
 
     <div class="quizz-edition-btns">
-      <a data-toggle="modal" class="btn btn-students-green" href="<%= new_quizz_card_path(@quizz) %>" data-target="#myModal2">Add a new card</a>
-      <span class="btn-students-yel"><%= link_to "Save", quizzs_path %></span>
+      <a data-toggle="modal" class="btn btn-students-green" href="<%= new_quizz_card_path(@quizz) %>" data-target="#myModal2">Add a card</a>
+      <div class="btn-students-yel"><%= link_to "Save", quizzs_path %></div>
     </div>
 
     <div class="quizz-edition-shares">
-      <h6>Shared to :</h6>
-       <% @quizz.shares.each do |share| %>
-       <div>
-       <%=share.classroom.name %> on <%=share.created_at.strftime("%d %B %Y") %>
-       </div>
-       <% end %>
+      <% @quizz.shares.each do |share| %>
+      <div>
+        <%=share.classroom.name %> on <%=share.created_at.strftime("%d %B %Y") %>
+      </div>
+      <% end %>
     </div>
   </div>
 
@@ -37,14 +40,13 @@
 
   <% @quizz.cards.each_with_index do |card, i| %>
     <div class="saved-card text-center">
-    <div class="card-position"><span class="cards-count"><%= i + 1 %>/<%=@quizz.cards.count %></span></div>
       <div class="saved-card-front">
          <p class="text-align"><strong><%= card.question %></strong></p>
-
       </div>
       <div class="saved-card-back text-align">
         <p><%= card.answer %></p>
       </div>
+        <div class="card-number"><%= i + 1 %>/<%=@quizz.cards.count %></div>
           <div class="details-cards">
 
           <a data-toggle="modal" href="<%= edit_card_path(card) %>" data-target="#myModal"> <i class="fa fa-pencil icons-cards"></i></a>

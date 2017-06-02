@@ -1,16 +1,23 @@
 /* Main class */
 .navbar-cogito {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background-color: transparent;
+  background-color: #828282;
   border: none;
   transition: all 0.3s ease;
   display: flex;
-  height: 60px;
-  padding: 0px 30px;
+  height: 65px;
+  padding: 0px 20px;
   align-items: center;
   justify-content: space-between;
   z-index: 100;
   transition: background-color 1s ease 0s;
+}
+
+.logo {
+  font-family: $home-font;
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
 }
 
 /* Navbar logo */
@@ -48,8 +55,8 @@
 /* Navbar dropdown menu */
 .navbar-cogito-dropdown-menu {
   margin-top: 15px;
-  box-shadow: 1px 1px 4px #33658A;
-  border-color: #74A2D3;
+  box-shadow: 1px 1px 4px #828282;
+
 }
 .navbar-cogito-dropdown-menu li > a {
   transition: color 0.3s ease;
@@ -74,4 +81,8 @@
   transform: rotate(45deg);
   border-left: 1px solid #33658A;
   border-top: 1px solid #33658A;
+}
+
+.fa-bars {
+  color: white;
 }
