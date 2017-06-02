@@ -24,8 +24,13 @@
     background-color: #FCDA00;
     border: 1px solid white;
     padding:5px;
-}
 
+  &:active {
+    background-color: white;
+    color: #FCDA00;
+    border: 2px solid #FCDA00;
+  }
+}
 
 .btn-students-red {
     color: white;
@@ -34,6 +39,12 @@
     background-color: #FC2D49;
     border: 1px solid white;
     padding:5px;
+
+  &:active {
+  background-color: white;
+  color: #FC2D49;
+  border: 2px solid #FC2D49;
+  }
 }
 
 .btn-students-green {
@@ -43,5 +54,11 @@
     background-color: #1EE494;
     border: 1px solid white;
     padding:5px;
+
+  &:active {
+  background-color: white;
+  color: #1EE494;
+  border: 2px solid #1EE494;
+  }
 }
 
