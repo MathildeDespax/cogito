@@ -57,5 +57,4 @@ class Classroom < ApplicationRecord
     end
     cards
   end
-
 end

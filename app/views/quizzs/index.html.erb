@@ -16,6 +16,7 @@
             <div class="details">
               <div class="quizz_card_name"><%= quizz.name %></div>
               <div class="quizz_card_category"><%= quizz.subject.upcase %></div>
+              <p><%= quizz.cards.count %> cards</p>
               <div class="shortcuts">
                 <%= link_to new_quizz_share_path(quizz), data: {target: "#shareQuizzModal", toggle: "modal"} do %>
                  <i class="fa fa-share-alt" aria-hidden="true"></i>
