@@ -10,54 +10,44 @@
     font-family: $home-font;
 }
 
-.btn-medium:hover {
+.btn-medium-save {
+    color: #F2EA57;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 1;
+    width: 170px;
+    background-color: #33658a;
+    font-weight: bolder;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.btn-medium-add {
+    border-radius: 50px;
+    opacity: 1;
+    width: 170px;
+    background-color: #F2EA57;
+    font-weight: bolder;
+    border: 2px solid #F2EA57;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.btn-medium-add:hover {
   text-decoration: none;
-  color: #FFD400;
-  border: 2px solid #FFD400;
-  background-color: white;
+  color: #33658a;
+  border: 2px solid #33658a;
 }
 
-.btn-students-yel {
-    color: white;
-    border-radius: 10px;
-    opacity: 1;
-    background-color: #FCDA00;
-    border: 1px solid white;
-    padding:5px;
-
-  &:active {
-    background-color: white;
-    color: #FCDA00;
-    border: 2px solid #FCDA00;
-  }
+.btn-medium-save:hover {
+  text-decoration: none;
+  color: #F2EA57;
+  border: 2px solid #F2EA57;
 }
-
-.btn-students-red {
-    color: white;
-    border-radius: 10px;
-    opacity: 1;
-    background-color: #FC2D49;
-    border: 1px solid white;
-    padding:5px;
-
-  &:active {
-  background-color: white;
-  color: #FC2D49;
-  border: 2px solid #FC2D49;
-  }
-}
-
-.btn-students-green {
-    color: white;
-    border-radius: 10px;
-    opacity: 1;
-    background-color: #1EE494;
-    border: 1px solid white;
-    padding:5px;
-
-  &:active {
-  background-color: white;
-  color: #1EE494;
-  border: 2px solid #1EE494;
+.save-test {
+  color: #F2EA57;
+  &:hover {
+    color: #F2EA57;
   }
 }
