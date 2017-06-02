@@ -173,8 +173,21 @@ quizzs_data = [
   },
   { quizz: geometry,
     question: "Combien de chèvres ?", answer:"12"
+  },
+  { quizz: globalisation,
+    question: "Quel est le premier port de commerce au monde?", answer:"Shanghaï"
+  },
+  { quizz: globalisation,
+    question: "Qu'est-ce qu'une firme multinationale ?", answer:"Une société implantée dans plusieurs Etats"
+  },
+  { quizz: globalisation,
+    question: "Quel est le premier pays producteur de pétrole au monde ?", answer:"Arabie saoudite"
+  },
+  { quizz: globalisation,
+    question: "A quelle époque commence la mondialisation ?", answer:"Au XVIème siècle"
   }
 ]
+
 puts 'done'
 
 Card.create!(quizzs_data)
