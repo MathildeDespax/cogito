@@ -1,3 +1,7 @@
+.my-quizzes{
+  margin-top: 80px;
+}
+
 .quizz_card {
   background-color: #fff;
   background-size: 100% 70%;
@@ -33,10 +37,6 @@
 .shadow-z-1 {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12),0 1px 6px 0 rgba(0, 0, 0, 0.12);
   z-index: 1;
-}
-.shadow-z-2 {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: 2;
 }
 
 .details {
@@ -79,9 +79,6 @@
 .fa-share-alt{
   color: #33658A;
   padding-left: 6px;
-}
-.my-quizzes{
-  margin-top: 80px;
 }
 
 .card-link {
