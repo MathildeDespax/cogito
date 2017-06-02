@@ -23,11 +23,16 @@
     </div>
 
     <div class="quizz-edition-shares">
-      <% @quizz.shares.each do |share| %>
-      <div>
-        <%=share.classroom.name %> on <%=share.created_at.strftime("%d %B %Y") %>
-      </div>
-      <% end %>
+      <% if @quizz.shares.exists? %>
+        <p> This quizz has been share to : </p>
+        <% @quizz.shares.each do |share| %>
+          <div>
+            <%=share.classroom.name %> on <%=share.created_at.strftime("%d %B %Y") %>
+          </div>
+        <% end %>
+      <% else %>
+        <p> This quizz has not been shared yet </p>
+      <%end%>
     </div>
   </div>
 
