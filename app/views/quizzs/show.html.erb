@@ -18,13 +18,13 @@
     </div>
 
     <div class="quizz-edition-btns">
-      <a data-toggle="modal" class="btn btn-students-green" href="<%= new_quizz_card_path(@quizz) %>" data-target="#myModal2">Add a card</a>
-      <div class="btn-students-yel"><%= link_to "Save", quizzs_path %></div>
+      <a data-toggle="modal" class="btn-medium-add btn-medium-add:hover" href="<%= new_quizz_card_path(@quizz) %>" data-target="#myModal2">Add a card</a>
+      <div class="btn-medium-save"><%= link_to "Save", quizzs_path, class: "save-test" %></div>
     </div>
 
     <div class="quizz-edition-shares">
       <% @quizz.shares.each do |share| %>
-      <div>
+      <div class="text-center">
         <%=share.classroom.name %> on <%=share.created_at.strftime("%d %B %Y") %>
       </div>
       <% end %>
