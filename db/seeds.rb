@@ -182,9 +182,6 @@ quizzs_data = [
   },
   { quizz: globalisation,
     question: "Quel est le premier pays producteur de pétrole au monde ?", answer:"Arabie saoudite"
-  },
-  { quizz: globalisation,
-    question: "A quelle époque commence la mondialisation ?", answer:"Au XVIème siècle"
   }
 ]
 
