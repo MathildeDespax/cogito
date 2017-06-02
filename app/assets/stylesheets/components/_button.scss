@@ -51,3 +51,44 @@
     color: #F2EA57;
   }
 }
+
+.btn-students-yel {
+    color: white;
+    border-radius: 30px;
+    opacity: 1;
+    background-color: #FFD000;
+    border: 1px solid white;
+    padding: 10px;
+    &:active {
+    color: #FFD000;
+    background-color: white;
+  }
+}
+
+.btn-students-red {
+    color: white;
+    border-radius: 30px;
+    opacity: 1;
+    background-color: #FF5200;
+    border: 1px solid white;
+    padding: 10px;
+    &:active {
+    color: #FF5200;
+    background-color: white;
+  }
+}
+.btn-students-green {
+    color: white;
+    border-radius: 30px;
+    opacity: 1;
+    background-color: #10CE2D;
+    border: 1px solid white;
+    padding: 10px;
+    &:active {
+    color: #10CE2D;
+    background-color: white;
+  }
+}
+
+
+
