@@ -75,9 +75,8 @@
 
 .quizz-edition {
   padding: 10px;
+  margin: 10px 10px 20px 10px;
   width: 30%;
-  margin: 10px;
-  margin-right: 30px;
   background-color: white;
   border-radius: 5px;
   display: flex;
@@ -140,18 +139,13 @@
   background-color: white;
   position: relative;
   overflow-y: scroll;
-  padding-bottom: 10px
 
 }
 
 .saved-card {
-  width: 95%;
   height: 140px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
   padding: 10px;
+  margin : 10px 10px 20px;
   border-radius: 10px;
   position: relative;
   color: rgb(51, 101, 138);
