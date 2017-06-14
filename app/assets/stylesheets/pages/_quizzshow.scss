@@ -62,7 +62,7 @@
 // Quizz show body
 
 .body-edition {
-  padding: 20px;
+  padding: 20px 40px 20px 40px;
   background-color: white;
   height: 90vh;
   display: flex;
@@ -75,7 +75,7 @@
 
 .quizz-edition {
   padding: 10px;
-  margin: 10px 10px 20px 10px;
+  margin: 10px 20px 20px 10px;
   width: 30%;
   background-color: white;
   border-radius: 5px;
@@ -117,13 +117,10 @@
   color: #33658A;
 }
 .quizz-edition-btns {
-  width: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-  margin: 10px 80px;
+  align-items: center;
 }
 
 .quizz-edition-btns > a {
@@ -145,7 +142,7 @@
 .saved-card {
   height: 140px;
   padding: 10px;
-  margin : 10px 10px 20px;
+  margin : 10px 10px 20px 20px;
   border-radius: 10px;
   position: relative;
   color: rgb(51, 101, 138);
