@@ -14,8 +14,8 @@ class User < ApplicationRecord
   has_many :student_evaluations
   has_many :cards, through: :student_evaluations
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
 
 
 end
