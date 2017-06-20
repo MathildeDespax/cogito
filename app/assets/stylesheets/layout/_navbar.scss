@@ -1,7 +1,11 @@
 /* Main class */
 .navbar-cogito {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+<<<<<<< HEAD
   background-color: #D0E3CC;
+=======
+  background-color: transparent;
+>>>>>>> fc8c4bdd7e77db401c1176026c90f52150cc5b1e
   border: none;
   transition: all 0.3s ease;
   display: flex;
@@ -67,7 +71,11 @@
   padding: 10px 20px;
 }
 .navbar-cogito-dropdown-menu li > a:hover {
+<<<<<<< HEAD
   background: transparent !important;
+=======
+  background: #EEE4E1 !important;
+>>>>>>> fc8c4bdd7e77db401c1176026c90f52150cc5b1e
   color: #162B80 !important;
 }
 .navbar-cogito-dropdown-menu:before {
@@ -85,4 +93,14 @@
 
 .fa-bars {
   color: #162B80;
+<<<<<<< HEAD
+=======
 }
+
+.fa-users {
+  color: #162b80;
+>>>>>>> fc8c4bdd7e77db401c1176026c90f52150cc5b1e
+}
+
+
+
