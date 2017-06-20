@@ -1,7 +1,7 @@
 /* Main class */
 .navbar-cogito {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background-color: #828282;
+  background-color: transparent;
   border: none;
   transition: all 0.3s ease;
   display: flex;
@@ -16,7 +16,7 @@
 .logo {
   font-family: $home-font;
   font-size: 25px;
-  color: white;
+  color: #162B80;
   font-weight: 700;
 }
 
@@ -24,7 +24,7 @@
 .navbar-cogito-logo img {
   width: 25px;
   background-color: transparent;
-  color: #33658A;
+  color: #162B80;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -39,16 +39,16 @@
   flex: 0 1 auto;
   cursor: pointer;
   padding: 0 20px;
-  color: #33658A;
+  color: #162B80;
 }
 
 /* Navbar standard link */
 .navbar-cogito-link {
-  color: #33658A;
+  color: #162B80;
   font-size: 20px;
 }
 .navbar-cogito-link:hover {
-  color: #33658A;
+  color: #162B80;
   text-decoration: none;
 }
 
@@ -61,14 +61,14 @@
 .navbar-cogito-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #33658A !important;
+  color: #162B80 !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
 }
 .navbar-cogito-dropdown-menu li > a:hover {
-  background: transparent !important;
-  color: #33658A !important;
+  background: #EEE4E1 !important;
+  color: #162B80 !important;
 }
 .navbar-cogito-dropdown-menu:before {
   content: ' ';
@@ -79,10 +79,17 @@
   top: -6px;
   background-color: white;
   transform: rotate(45deg);
-  border-left: 1px solid #33658A;
-  border-top: 1px solid #33658A;
+  border-left: 1px solid #162B80;
+  border-top: 1px solid #162B80;
 }
 
 .fa-bars {
-  color: white;
+  color: #162B80;
 }
+
+.fa-users {
+  color: #162b80;
+}
+
+
+
